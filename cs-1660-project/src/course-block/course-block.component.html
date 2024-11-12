@@ -1,8 +1,4 @@
-<mat-card
-  class="card"
-  appearance="outlined"
-  (click)="navigateToCourse(course()?.code)"
->
+<mat-card class="card" appearance="outlined" (click)="navigateToCourse()">
   <mat-card-content>
     <mat-card-header>{{ course()?.courseNo }}</mat-card-header>
     <mat-card-title>{{ course()?.courseName }}</mat-card-title>

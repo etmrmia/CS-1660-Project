@@ -1,7 +1,8 @@
-import { Component, input } from '@angular/core';
+import { Component, inject, input } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { CourseBlockInfo } from '../types/course-block-info.type';
 import { Router } from '@angular/router';
+import { CourseStore } from '../stores/course.store';
 @Component({
   selector: 'app-course-block',
   standalone: true,
@@ -11,13 +12,12 @@ import { Router } from '@angular/router';
 })
 export class CourseBlockComponent {
   course = input<CourseBlockInfo>();
+  readonly courseStore = inject(CourseStore);
 
   constructor(private router: Router) {}
 
-  navigateToCourse(code: number | undefined) {
-    console.log('code: ' + code);
-    if (code) {
-      this.router.navigate(['/course', code]);
-    }
+  navigateToCourse() {
+    this.courseStore.setCourse(this.course());
+    this.router.navigate(['/course', this.course()?.code]);
   }
 }

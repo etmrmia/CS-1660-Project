@@ -3,6 +3,6 @@
     {{ isStudent ? "Join Course" : "Create Course" }}
   </button>
 </div>
-<div class="course-block" *ngFor="let course of courses">
+<div class="course-block" *ngFor="let course of courses()">
   <app-course-block [course]="course"></app-course-block>
 </div>

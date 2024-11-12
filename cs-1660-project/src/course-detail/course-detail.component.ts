@@ -1,38 +1,43 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CourseBlockInfo } from '../types/course-block-info.type';
+import { MatTabsModule } from '@angular/material/tabs';
+import { CourseStore } from '../stores/course.store';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-course-detail',
   standalone: true,
-  imports: [],
+  imports: [MatTabsModule, NgIf],
   templateUrl: './course-detail.component.html',
   styleUrl: './course-detail.component.scss',
 })
-export class CourseDetailComponent implements OnInit {
-  course: CourseBlockInfo | undefined;
-  code: number = 0;
+export class CourseDetailComponent {
+  pageLinks = ['Content', 'Gradebook'];
+  activeLink = 'Content';
+  readonly courseStore = inject(CourseStore);
+  course = this.courseStore.courseChosen;
 
   constructor(private route: ActivatedRoute) {}
 
-  ngOnInit(): void {
-    this.route.paramMap.subscribe((params) => {
-      const code = params.get('code');
-      // Load course information depending on course number
-      if (code) {
-        this.getCourseInformation();
-      }
-    });
-  }
+  // ngOnInit(): void {
+  //   this.route.paramMap.subscribe((params) => {
+  //     const code = params.get('code');
+  //     // Load course information depending on course number
+  //     if (code) {
+  //       this.getCourseInformation();
+  //     }
+  //   });
+  // }
 
   getCourseInformation() {
     // TODO: Implement getting course info from database
-    this.course = {
-      courseName: 'Cloud Computing',
-      courseNo: 'CS 1660',
-      instructor: 'Dan Mahoney',
-      term: 'Fall 2024',
-      code: this.code,
-    };
+    // this.course = {
+    //   courseName: 'Cloud Computing',
+    //   courseNo: 'CS 1660',
+    //   instructor: 'Dan Mahoney',
+    //   term: 'Fall 2024',
+    //   code: this.code,
+    // };
   }
 }
