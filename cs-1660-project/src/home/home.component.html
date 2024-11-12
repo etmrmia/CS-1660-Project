@@ -1,0 +1,8 @@
+<div class="add-course">
+  <button mat-flat-button class="add-course-button" (click)="addCourse()">
+    {{ isStudent ? "Join Course" : "Create Course" }}
+  </button>
+</div>
+<div class="course-block" *ngFor="let course of courses">
+  <app-course-block [course]="course"></app-course-block>
+</div>

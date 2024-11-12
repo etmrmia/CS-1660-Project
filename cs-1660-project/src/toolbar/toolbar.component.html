@@ -1,0 +1,42 @@
+<mat-toolbar class="toolbar-row">
+  <div>
+    <button mat-icon-button (click)="navigateHome()">
+      <mat-icon>home</mat-icon>
+    </button>
+    <span>Git It Done</span>
+  </div>
+  <div>
+    <span class="user-name-display">{{ user.name }}</span>
+    <button mat-icon-button (click)="setIsHomeMenuOpen()">
+      <mat-icon>account_circle</mat-icon>
+    </button>
+    <div class="account-info">
+      <div class="fab-links" *ngIf="isHomeMenuOpen()">
+        <button
+          mat-mini-fab
+          color="accent"
+          (click)="onLinkClick('Link 1')"
+          matTooltip="Link 1"
+        >
+          <mat-icon>link</mat-icon>
+        </button>
+        <button
+          mat-mini-fab
+          color="accent"
+          (click)="onLinkClick('Link 2')"
+          matTooltip="Link 2"
+        >
+          <mat-icon>link</mat-icon>
+        </button>
+        <button
+          mat-mini-fab
+          color="accent"
+          (click)="onLinkClick('Link 3')"
+          matTooltip="Link 3"
+        >
+          <mat-icon>link</mat-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+</mat-toolbar>
