@@ -7,36 +7,18 @@
   </div>
   <div>
     <span class="user-name-display">{{ user.name }}</span>
-    <button mat-icon-button (click)="setIsHomeMenuOpen()">
-      <mat-icon>account_circle</mat-icon>
+    <mat-menu #appMenu="matMenu">
+      <ng-template matMenuContent let-name="name">
+        <button mat-menu-item>Settings</button>
+        <button mat-menu-item>Log off {{ user.name }}</button>
+      </ng-template>
+    </mat-menu>
+    <button
+      mat-icon-button
+      [matMenuTriggerFor]="appMenu"
+      [matMenuTriggerData]="user"
+    >
+      <mat-icon>more_vert</mat-icon>
     </button>
-    <div class="account-info">
-      <div class="fab-links" *ngIf="isHomeMenuOpen()">
-        <button
-          mat-mini-fab
-          color="accent"
-          (click)="onLinkClick('Link 1')"
-          matTooltip="Link 1"
-        >
-          <mat-icon>link</mat-icon>
-        </button>
-        <button
-          mat-mini-fab
-          color="accent"
-          (click)="onLinkClick('Link 2')"
-          matTooltip="Link 2"
-        >
-          <mat-icon>link</mat-icon>
-        </button>
-        <button
-          mat-mini-fab
-          color="accent"
-          (click)="onLinkClick('Link 3')"
-          matTooltip="Link 3"
-        >
-          <mat-icon>link</mat-icon>
-        </button>
-      </div>
-    </div>
   </div>
 </mat-toolbar>

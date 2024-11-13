@@ -1,14 +1,13 @@
 import { Component, signal } from '@angular/core';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
-import { MatExpansionModule } from '@angular/material/expansion';
-import { NgIf } from '@angular/common';
+import { MatMenuModule } from '@angular/material/menu';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-toolbar',
   standalone: true,
-  imports: [MatToolbarModule, MatIconModule, MatExpansionModule, NgIf],
+  imports: [MatToolbarModule, MatIconModule, MatMenuModule],
   templateUrl: './toolbar.component.html',
   styleUrl: './toolbar.component.scss',
 })
