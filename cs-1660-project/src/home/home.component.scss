@@ -1,6 +1,11 @@
 .add-course {
     display: flex;
     justify-content:end;
+
+    button {
+        background-color: hotpink;
+        font-family: cursive;
+    }
 }
 
 .add-course-button {
@@ -8,5 +13,11 @@
 }
 
 .course-block {
+    font-family: cursive;
     padding: 0.5rem 2rem;
+    color: pink;
+
+    app-course-block {
+        text-align: right;
+    }
 }
