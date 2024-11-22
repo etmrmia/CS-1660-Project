@@ -87,7 +87,7 @@ CREATE TABLE ROSTER
 --              Time that the qrCode is scanned is also recorded.
 CREATE TABLE ATTENDANCE
 (
-    qrCode              VARCHAR(32), -- Uncertain how to store qrCode: Varchar or Integer? Need to look into this
+    -- qrCode              VARCHAR(32), -- Don't need to store QR code
     date                TIMESTAMP,
     sectionNo           INTEGER,
     courseID            VARCHAR(20),
