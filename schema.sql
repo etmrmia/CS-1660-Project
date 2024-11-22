@@ -82,18 +82,17 @@ CREATE TABLE ROSTER
         ON DELETE CASCADE
 );
 
--- ATTENDANCE(date, sectionNo, courseID, studentID)
+-- ATTENDANCE(attendanceDate, sectionNo, courseID, studentID)
 -- DESCRIPTION: Attendance list of students who scan QR code in a given section of a course.
 --              Time that the qrCode is scanned is also recorded.
 CREATE TABLE ATTENDANCE
 (
-    -- qrCode              VARCHAR(32), -- Don't need to store QR code
-    date                TIMESTAMP,
+    attendanceDate      TIMESTAMP,
     sectionNo           INTEGER,
     courseID            VARCHAR(20),
     studentID           INTEGER,
 
-    CONSTRAINT PK_ATTENDANCE PRIMARY KEY (date, sectionNo, courseID, studentID),
+    CONSTRAINT PK_ATTENDANCE PRIMARY KEY (attendanceDate, sectionNo, courseID, studentID),
     CONSTRAINT FK_ATTENDANCE FOREIGN KEY (sectionNo, courseID, studentID) REFERENCES ROSTER (sectionNo, courseID, studentID)
         ON UPDATE CASCADE
         ON DELETE CASCADE
