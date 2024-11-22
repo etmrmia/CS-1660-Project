@@ -82,7 +82,7 @@ CREATE TABLE ROSTER
         ON DELETE CASCADE
 );
 
--- ATTENDANCE(qrCode, date, sectionNo, courseID, studentID)
+-- ATTENDANCE(date, sectionNo, courseID, studentID)
 -- DESCRIPTION: Attendance list of students who scan QR code in a given section of a course.
 --              Time that the qrCode is scanned is also recorded.
 CREATE TABLE ATTENDANCE
