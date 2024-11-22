@@ -93,7 +93,7 @@ CREATE TABLE ATTENDANCE
     courseID            VARCHAR(20),
     studentID           INTEGER,
 
-    CONSTRAINT PK_ATTENDANCE PRIMARY KEY (qrCode, date, sectionNo, courseID, studentID),
+    CONSTRAINT PK_ATTENDANCE PRIMARY KEY (date, sectionNo, courseID, studentID),
     CONSTRAINT FK_ATTENDANCE FOREIGN KEY (sectionNo, courseID, studentID) REFERENCES ROSTER (sectionNo, courseID, studentID)
         ON UPDATE CASCADE
         ON DELETE CASCADE
