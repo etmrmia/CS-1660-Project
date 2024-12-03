@@ -1,8 +1,8 @@
 import { Component, inject, input } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
-import { CourseBlockInfo } from '../types/course-block-info.type';
 import { Router } from '@angular/router';
 import { CourseStore } from '../stores/course.store';
+import { Course } from '../types/course.type';
 @Component({
   selector: 'app-course-block',
   standalone: true,
@@ -11,13 +11,13 @@ import { CourseStore } from '../stores/course.store';
   styleUrl: './course-block.component.scss',
 })
 export class CourseBlockComponent {
-  course = input<CourseBlockInfo>();
+  course = input<Course>();
   readonly courseStore = inject(CourseStore);
 
   constructor(private router: Router) {}
 
   navigateToCourse() {
     this.courseStore.setCourse(this.course());
-    this.router.navigate(['/course', this.course()?.code]);
+    this.router.navigate(['/course', this.course()?.courseID]);
   }
 }

@@ -1,9 +1,9 @@
 <mat-card class="card" appearance="outlined" (click)="navigateToCourse()">
   <mat-card-content>
-    <mat-card-header>{{ course()?.courseNo }}</mat-card-header>
+    <mat-card-header>{{ course()?.courseID }}</mat-card-header>
     <mat-card-title>{{ course()?.courseName }}</mat-card-title>
-    <mat-card-footer>{{
-      "Instructor: " + course()?.instructor
-    }}</mat-card-footer>
+    <mat-card-footer>
+      Instructor: {{ course()?.professor?.firstName }} {{ course()?.professor?.lastName }}
+    </mat-card-footer>
   </mat-card-content>
 </mat-card>

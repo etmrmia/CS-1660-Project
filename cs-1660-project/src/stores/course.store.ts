@@ -8,12 +8,13 @@ import {
 } from '@ngrx/signals';
 import { CourseBlockInfo } from '../types/course-block-info.type';
 import { computed } from '@angular/core';
+import { Course } from '../types/course.type';
 
 type CourseState = {
-  courses: CourseBlockInfo[];
+  courses: Course[];
   isLoading: boolean;
   filter: { query: string; order: 'asc' | 'desc' };
-  courseChosen: CourseBlockInfo | undefined;
+  courseChosen: Course | undefined;
 };
 
 const initialState: CourseState = {
@@ -39,179 +40,44 @@ export const CourseStore = signalStore(
     setOrder(order: 'asc' | 'desc'): void {
       patchState(store, (state) => ({ filter: { ...state.filter, order } }));
     },
-    setCourse(course: CourseBlockInfo | undefined): void {
+    setCourse(course: Course | undefined): void {
       patchState(store, (state) => ({ courseChosen: course }));
     },
-    loadCourses(): void {
+    loadCourses(id: number, isStudent: boolean): void {
       patchState(store, (state) => ({
         courses: [
           {
             courseName: 'Cloud Computing',
-            courseNo: 'CS 1660',
-            instructor: 'Dan Mahoney',
-            term: 'Fall 2024',
-            code: 1,
+            courseID: 'CS 1660',
+            professor: {
+              id: 1,
+              firstName: 'Dan',
+              lastName: 'Mahoney',
+              isStudent: false,
+            },
+            sectionNo: 1,
           },
           {
             courseName: 'Database Management Systems',
-            courseNo: 'CS 1555',
-            instructor: 'Brian Nixon',
-            term: 'Spring 2024',
-            code: 2,
+            courseID: 'CS 1555',
+            professor: {
+              id: 2,
+              firstName: 'Brian',
+              lastName: 'Nixon',
+              isStudent: false,
+            },
+            sectionNo: 2,
           },
           {
             courseName: 'Machine Learning',
-            courseNo: 'CS 1675',
-            instructor: 'Patrick Skeba',
-            term: 'Fall 2023',
-            code: 3,
-          },
-          {
-            courseName: 'Cloud Computing',
-            courseNo: 'CS 1660',
-            instructor: 'Dan Mahoney',
-            term: 'Fall 2024',
-            code: 1,
-          },
-          {
-            courseName: 'Database Management Systems',
-            courseNo: 'CS 1555',
-            instructor: 'Brian Nixon',
-            term: 'Spring 2024',
-            code: 2,
-          },
-          {
-            courseName: 'Machine Learning',
-            courseNo: 'CS 1675',
-            instructor: 'Patrick Skeba',
-            term: 'Fall 2023',
-            code: 3,
-          },
-          {
-            courseName: 'Cloud Computing',
-            courseNo: 'CS 1660',
-            instructor: 'Dan Mahoney',
-            term: 'Fall 2024',
-            code: 1,
-          },
-          {
-            courseName: 'Database Management Systems',
-            courseNo: 'CS 1555',
-            instructor: 'Brian Nixon',
-            term: 'Spring 2024',
-            code: 2,
-          },
-          {
-            courseName: 'Machine Learning',
-            courseNo: 'CS 1675',
-            instructor: 'Patrick Skeba',
-            term: 'Fall 2023',
-            code: 3,
-          },
-          {
-            courseName: 'Cloud Computing',
-            courseNo: 'CS 1660',
-            instructor: 'Dan Mahoney',
-            term: 'Fall 2024',
-            code: 1,
-          },
-          {
-            courseName: 'Database Management Systems',
-            courseNo: 'CS 1555',
-            instructor: 'Brian Nixon',
-            term: 'Spring 2024',
-            code: 2,
-          },
-          {
-            courseName: 'Machine Learning',
-            courseNo: 'CS 1675',
-            instructor: 'Patrick Skeba',
-            term: 'Fall 2023',
-            code: 3,
-          },
-          {
-            courseName: 'Cloud Computing',
-            courseNo: 'CS 1660',
-            instructor: 'Dan Mahoney',
-            term: 'Fall 2024',
-            code: 1,
-          },
-          {
-            courseName: 'Database Management Systems',
-            courseNo: 'CS 1555',
-            instructor: 'Brian Nixon',
-            term: 'Spring 2024',
-            code: 2,
-          },
-          {
-            courseName: 'Machine Learning',
-            courseNo: 'CS 1675',
-            instructor: 'Patrick Skeba',
-            term: 'Fall 2023',
-            code: 3,
-          },
-          {
-            courseName: 'Cloud Computing',
-            courseNo: 'CS 1660',
-            instructor: 'Dan Mahoney',
-            term: 'Fall 2024',
-            code: 1,
-          },
-          {
-            courseName: 'Database Management Systems',
-            courseNo: 'CS 1555',
-            instructor: 'Brian Nixon',
-            term: 'Spring 2024',
-            code: 2,
-          },
-          {
-            courseName: 'Machine Learning',
-            courseNo: 'CS 1675',
-            instructor: 'Patrick Skeba',
-            term: 'Fall 2023',
-            code: 3,
-          },
-          {
-            courseName: 'Cloud Computing',
-            courseNo: 'CS 1660',
-            instructor: 'Dan Mahoney',
-            term: 'Fall 2024',
-            code: 1,
-          },
-          {
-            courseName: 'Database Management Systems',
-            courseNo: 'CS 1555',
-            instructor: 'Brian Nixon',
-            term: 'Spring 2024',
-            code: 2,
-          },
-          {
-            courseName: 'Machine Learning',
-            courseNo: 'CS 1675',
-            instructor: 'Patrick Skeba',
-            term: 'Fall 2023',
-            code: 3,
-          },
-          {
-            courseName: 'Cloud Computing',
-            courseNo: 'CS 1660',
-            instructor: 'Dan Mahoney',
-            term: 'Fall 2024',
-            code: 1,
-          },
-          {
-            courseName: 'Database Management Systems',
-            courseNo: 'CS 1555',
-            instructor: 'Brian Nixon',
-            term: 'Spring 2024',
-            code: 2,
-          },
-          {
-            courseName: 'Machine Learning',
-            courseNo: 'CS 1675',
-            instructor: 'Patrick Skeba',
-            term: 'Fall 2023',
-            code: 3,
+            courseID: 'CS 1675',
+            professor: {
+              id: 3,
+              firstName: 'Patrick',
+              lastName: 'Skeba',
+              isStudent: false,
+            },
+            sectionNo: 3,
           },
         ],
       }));
@@ -219,7 +85,7 @@ export const CourseStore = signalStore(
   })),
   withHooks({
     onInit(store) {
-      store.loadCourses();
+      store.loadCourses(1, true);
     },
   })
 );

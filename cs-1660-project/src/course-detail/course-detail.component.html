@@ -1,4 +1,4 @@
-<h3>{{ course()?.courseNo }} {{ course()?.courseName }}</h3>
+<h3>{{ course()?.courseID }} {{ course()?.courseName }}</h3>
 <div>
   <nav mat-tab-nav-bar [tabPanel]="tabPanel">
     @for (link of pageLinks; track link) {
@@ -12,6 +12,20 @@
     <p>content</p>
   </ng-container>
   <ng-container *ngIf="activeLink === 'Gradebook'">
-    <p>grade book</p>
+    <div *ngIf="user()?.isStudent">
+      <h3>Attendance for {{ user()?.firstName }} {{ user()?.lastName }}</h3>
+      <div>Total Attendance: {{ attendance().length }}</div>
+    </div>
+    <div *ngIf="!user()?.isStudent">
+      <h3>Attendance for {{ course()?.courseName }}</h3>
+    </div>
+    <mat-list>
+      @for (date of attendance(); track date) {
+      <mat-list-item>{{
+        date.attendanceDate.toLocaleDateString()
+      }}</mat-list-item>
+      <mat-divider />
+      }
+    </mat-list>
   </ng-container>
 </div>
