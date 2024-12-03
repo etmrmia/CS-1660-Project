@@ -1,5 +1,16 @@
 .toolbar-row {
+    background-color: hotpink;
     justify-content: space-between;
+    font-family: cursive;
+
+    button {
+        background-color: gray;
+        margin: 0.5rem;
+        border-radius: 5px;
+        border-width: 1px;
+        border-color: gray;
+        color: black;
+    }
 }
 
 .user-name-display {
