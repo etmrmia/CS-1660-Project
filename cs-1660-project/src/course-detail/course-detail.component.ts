@@ -41,12 +41,18 @@ export class CourseDetailComponent {
     // };
   }
 
-    getQrCode() {
-      fetch("/data", {
+    async getQrCode() {
+      const response = await fetch("/data", {
         method: "POST",
         headers: {
           "Content-Type" : "application/json",
         },
+        // Depending on where connecting database may need to send JSON to server side
+        // json is data to be embedded
+        // body: JSON.stringify(json)
       });
+
+      const data = await response.json();
+      console.log(data);
     }
 }
