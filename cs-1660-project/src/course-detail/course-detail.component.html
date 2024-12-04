@@ -8,9 +8,10 @@
     }
   </nav>
   <mat-tab-nav-panel #tabPanel></mat-tab-nav-panel>
-  <ng-container *ngIf="activeLink === 'Content'">
-    <p>content</p>
-    <button (click)="getQrCode()">Test QR</button>
+  <ng-container *ngIf="activeLink === 'QR Code'">
+    <h3>Scan QR Code To Mark Attendance</h3>
+    <app-qr-code></app-qr-code>
+    <!-- <button (click)="getQrCode()">Test QR</button> -->
   </ng-container>
   <ng-container *ngIf="activeLink === 'Gradebook'">
     <ng-container *ngIf="user()?.isStudent">
