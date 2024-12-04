@@ -1,8 +1,9 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { Router } from '@angular/router';
+import { UserStore } from '../stores/user.store';
 
 @Component({
   selector: 'app-toolbar',
@@ -13,10 +14,8 @@ import { Router } from '@angular/router';
 })
 export class ToolbarComponent {
   readonly isHomeMenuOpen = signal(false);
-  user = {
-    name: 'John Smith',
-    isProfessor: false,
-  };
+  userStore = inject(UserStore);
+  user = this.userStore.user;
 
   constructor(private router: Router) {}
 
@@ -29,6 +28,13 @@ export class ToolbarComponent {
   }
 
   navigateHome() {
+    this.router.navigate(['/home']);
+  }
+
+  loginLogout() {
+    if (this.user()) {
+      this.userStore.logout();
+    }
     this.router.navigate(['/']);
   }
 }
