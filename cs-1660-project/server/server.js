@@ -16,3 +16,10 @@ app.get('/', (req, res) => {
 app.listen(port, () => {
   console.log(`Server listening at http://localhost:${port}`);
 });
+
+/**
+ * Here's the fun stuff 
+ */
+app.post("/data", function (req, res) {
+  console.log("Testing 1 2 3...");
+});

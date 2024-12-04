@@ -40,4 +40,13 @@ export class CourseDetailComponent {
     //   code: this.code,
     // };
   }
+
+    getQrCode() {
+      fetch("/data", {
+        method: "POST",
+        headers: {
+          "Content-Type" : "application/json",
+        },
+      });
+    }
 }
