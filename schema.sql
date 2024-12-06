@@ -6,28 +6,32 @@ DROP SCHEMA IF EXISTS GitItDoneDB CASCADE;
 CREATE SCHEMA GitItDoneDB;
 SET search_path TO GitItDoneDB;
 
--- STUDENT (studentID, firstName, middleInitial, lastName)
+-- STUDENT (studentID, firstName, lastName, email, password)
 -- DESCRIPTION: List of students and their information.
 CREATE TABLE STUDENT
 (
     studentID        SERIAL,
     firstName        VARCHAR(20) NOT NULL,
-    middleInitial    CHAR(1),
     lastName         VARCHAR(20) NOT NULL,
+    email            VARCHAR(20) NOT NULL,
+    password         VARCHAR(20) NOT NULL,
 
-    CONSTRAINT PK_STUDENT PRIMARY KEY (studentID)
+    CONSTRAINT PK_STUDENT PRIMARY KEY (studentID),
+    CONSTRAINT UN_STUDENT_EMAIL UNIQUE (email)
 );
 
--- PROFESSOR (professorID, firstName, middleInitial, lastName)
+-- PROFESSOR (professorID, firstName, lastName, email, password)
 -- DESCRIPTION: List of professors and their information.
 CREATE TABLE PROFESSOR
 (
     professorID         SERIAL,
     firstName           VARCHAR(20) NOT NULL,
-    middleInitial       CHAR(1),
     lastName            VARCHAR(20) NOT NULL,
+    email               VARCHAR(20) NOT NULL,
+    password            VARCHAR(20) NOT NULL,
 
-    CONSTRAINT PK_PROFESSOR_ID PRIMARY KEY (professorID)
+    CONSTRAINT PK_PROFESSOR_ID PRIMARY KEY (professorID),
+    CONSTRAINT UN_PROFESSOR_EMAIL UNIQUE (email)
 );
 
 -- COURSES (courseID, courseName)
@@ -36,7 +40,7 @@ CREATE TABLE PROFESSOR
 CREATE TABLE COURSE
 (
     courseID               VARCHAR(20),
-    courseName             VARCHAR(32) NOT NULL,
+    courseName             VARCHAR(40) NOT NULL,
 
     CONSTRAINT PK_COURSE PRIMARY KEY (courseID)
 );
