@@ -10,6 +10,8 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@google-cloud/cloud-sql-connector": "^1.4.0",
+    "pg": "^8.13.1",
     "qrcode": "^1.5.4"
   }
 }
