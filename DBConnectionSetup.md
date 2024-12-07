@@ -5,4 +5,4 @@
 - Note: located under Local development environment -> Configure ADC with your Google Account -> follow the 2 steps
 4. Now, run node server.js as normal. To test if it is configured correctly, it should print all records in the students table.
 
-Information on Connection Pooling can be found here: https://github.com/GoogleCloudPlatform/cloud-sql-nodejs-connector?tab=readme-ov-file
+Information on How the Connection Pooling is configured can be found here: https://github.com/GoogleCloudPlatform/cloud-sql-nodejs-connector?tab=readme-ov-file
