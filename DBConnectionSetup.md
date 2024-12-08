@@ -6,4 +6,6 @@
 - Should be the same Google account which will have IAM role assigned to them
 4. Now, run node server.js as normal. To test if it is configured correctly, it should print all records in the students table.
 
-Information on How the Connection Pooling is configured can be found here: https://github.com/GoogleCloudPlatform/cloud-sql-nodejs-connector?tab=readme-ov-file
+
+## More Information on Connection Pooling
+- Information on How the Connection Pooling is configured can be found here: https://github.com/GoogleCloudPlatform/cloud-sql-nodejs-connector?tab=readme-ov-file
