@@ -76,7 +76,6 @@ app.post('/qrcode', async (req, res) => {
 // Below is WIP 
 // app.post('/recordAttendance', async (req, res) => {
 //   try {
-//     const query = 'INSERT INTO ATTENDANCE (attendanceDate, sectionNo, courseID, studentID) VALUES ($1, $2, $3, $4) RETURNING *';
 //   } catch (error) {
 //     console.error(error);
 //   }
