@@ -1,4 +1,4 @@
-## To Connect To Google Cloud SQL Instance
+## How To Connect To Google Cloud SQL Instance Locally
 1. I must add your google account to the users who are able to access the database and assign IAM role Cloud SQL Client. 
 2. Install Google CLI locally. Instructions on installation: https://cloud.google.com/sdk/docs/install
 3. Configure ADC with a google account using Google CLI. Instructions on installation: https://cloud.google.com/docs/authentication/provide-credentials-adc#local-dev
