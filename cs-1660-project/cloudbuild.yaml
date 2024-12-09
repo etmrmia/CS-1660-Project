@@ -1,0 +1,35 @@
+steps:
+  # Build the container image
+  - name: "gcr.io/cloud-builders/docker"
+    args:
+      [
+        "build",
+        "-t",
+        "us-central1-docker.pkg.dev/fine-effect-435423-b8/git-it-done/git-it-done-image:$COMMIT_SHA",
+        "-f",
+        "./git-it-done/Dockerfile",
+        "./git-it-done",
+      ]
+
+  # Push the container image to Artifact Registry
+  - name: "gcr.io/cloud-builders/docker"
+    args:
+      [
+        "push",
+        "us-central1-docker.pkg.dev/fine-effect-435423-b8/git-it-done/git-it-done-image:$COMMIT_SHA",
+      ]
+
+  # Deploy container to Cloud Run
+  - name: "gcr.io/google.com/cloudsdktool/cloud-sdk"
+    entrypoint: gcloud
+    args:
+      [
+        "run",
+        "deploy",
+        "git-it-done",
+        "--image",
+        "us-central1-docker.pkg.dev/fine-effect-435423-b8/git-it-done/git-it-done-image:$COMMIT_SHA",
+        "--region",
+        "us-central1",
+        "--allow-unauthenticated",
+      ]
