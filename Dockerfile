@@ -13,6 +13,6 @@ RUN ng build --configuration production
 
 WORKDIR /usr/src/app/server
 
-EXPOSE 8080
+EXPOSE 3000
 
 ENTRYPOINT ["node", "server.js"]
