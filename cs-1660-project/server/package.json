@@ -11,5 +11,6 @@
   "description": "",
   "dependencies": {
     "qrcode": "^1.5.4"
-  }
+  },
+  "type": "module"
 }
