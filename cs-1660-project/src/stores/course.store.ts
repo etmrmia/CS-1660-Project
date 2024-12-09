@@ -77,7 +77,7 @@ export const CourseStore = signalStore(
               lastName: 'Skeba',
               isStudent: false,
             },
-            sectionNo: 3,
+            sectionNo: 4,
           },
         ],
       }));
