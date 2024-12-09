@@ -8,6 +8,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
 import { MatTableModule } from '@angular/material/table';
 import { StudentAttendanceDisplay } from '../types/student-attendance-display.type';
+import { QrCodeComponent } from '../qr-code/qr-code.component';
 
 @Component({
   selector: 'app-course-detail',
@@ -18,13 +19,15 @@ import { StudentAttendanceDisplay } from '../types/student-attendance-display.ty
     MatDividerModule,
     MatListModule,
     MatTableModule,
+    QrCodeComponent,
   ],
   templateUrl: './course-detail.component.html',
   styleUrl: './course-detail.component.scss',
 })
 export class CourseDetailComponent {
-  pageLinks = ['Content', 'Gradebook'];
-  activeLink = 'Content';
+  // Changee Link 'Contentj' to QR Code 
+  pageLinks = ['QR Code', 'Gradebook'];
+  activeLink = 'QR Code';
   readonly courseStore = inject(CourseStore);
   readonly userStore = inject(UserStore);
   course = this.courseStore.courseChosen;
@@ -79,3 +82,8 @@ export class CourseDetailComponent {
     console.log(data);
   }
 }
+
+// TODO: add QR Scanner component to course detail component & create event on scan 
+// To call API in backend to store the information scanned from the QR code 
+// NOTE: this functionality should only be available for STUDENTS 
+// i.e. SCAN FUNCTIONALITY WILL NOT BE AVAILABLE TO PROFESSOR ROLES  

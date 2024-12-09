@@ -30,6 +30,9 @@
     "tslib": "^2.3.0",
     "zone.js": "~0.14.10"
   },
+  "optionalDependencies": {
+    "@rollup/rollup-darwin-x64": "^4.28.0"
+  },
   "devDependencies": {
     "@angular-devkit/build-angular": "^18.2.11",
     "@angular/cli": "^18.2.11",
