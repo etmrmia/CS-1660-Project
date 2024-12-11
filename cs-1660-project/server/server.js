@@ -46,15 +46,12 @@ app.post("/data", function (req, res) {
 });
 
 // Endpoint encodes qr code as Base64 string and sends this information
-app.post('/qrcode', async (req, res) => {
-  
-  let data = {
-    sectionNo : 101,
-    courseID : "TEST1",
-    profID : 0
-  }
+app.post('/qrcode', express.json(), async (req, res) => {
 
-  qrCode.toDataURL(JSON.stringify(data), {type:'terminal'},
+  console.log("Getting qr code");
+  console.log(req.body);
+
+  qrCode.toDataURL(JSON.stringify(req.body), {type:'terminal'},
   function(err, base64url) {
     if (err) {
       console.log(err);
@@ -65,8 +62,29 @@ app.post('/qrcode', async (req, res) => {
     res.send({qrCode:base64url});
   }
 )
+});
+
+// Endpoint encodes qr code as Base64 string and sends this information
+app.post('/getAttendance', express.json(), async (req, res) => {
+ 
+  console.log("Getting student attendance");
+  console.log(req.body);
+
+  // Query here for student attendance and then send result if they did attend within past 24 hrs
+  res.setHeader('Content-Type', 'application/json');
+  if(true)
+    res.send({attended:"True"});
+  else
+    res.send({attended:"False"});
 
 });
+
+app.post('/recordAttendance', express.json(), async (req, res) => {
+  console.log("Recording student attendance");
+  console.log(req.body);
+  // INSERT INTO DB HERE 
+});
+
 
 // TODO: Create endpoint that will store DB elements after QR code has been scanned 
 // The Front End will call this API after the QR code has been scanned, and pass 
