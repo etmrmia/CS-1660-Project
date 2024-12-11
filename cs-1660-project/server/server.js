@@ -68,10 +68,23 @@ app.post("/authuser", async function (req, res) {
     WHERE email = '${req.body["email"]}' AND password = '${req.body["password"]}';`;
   var isStudent = false, idData = 0;
   // Runs query for student information
-  var rows = await pool.query(studentQuery);
+  try {
+    var rows = await pool.query(studentQuery);
+  }
+  catch (studentErr) {
+    console.log(studentErr);
+    return;
+  }
   // If no rows found, runs professor query
   if (rows.rowCount < 1) {
-    rows = await pool.query(profQuery);
+    try {
+      rows = await pool.query(profQuery);
+    }
+    catch (profError) {
+      console.log(profError);
+
+      return;
+    }
   }
   else {
     isStudent = true;
@@ -105,9 +118,15 @@ app.post('/userattendance', async function (req, res) {
                   WHERE a.studentID = ${req.body["studentId"]}
                   GROUP BY c.courseName
                   ORDER BY c.courseName;`;
-  console.log(`In userattendance => ${query}`);
-  var rows = await pool.query(query);
-  console.log(rows);
+  
+  try {
+    var rows = await pool.query(query);
+  }
+  catch (e) {
+    console.log(e);
+    return;
+  }
+  
   // Sends user information back as a json object
   res.setHeader('Content-Type', 'application/json');
   res.send(JSON.stringify({ attendanceRows : rows }));
@@ -124,9 +143,14 @@ app.post('/studentcourses', async function (req, res) {
                   JOIN gititdonedb.PROFESSOR p on s.professorID = p.professorID
                   WHERE r.studentID = ${req.body["studentId"]}
                   ORDER BY c.courseID;`;
-  console.log(`In studentcourses => ${query}`);
-  var rows = await pool.query(query);
-  console.log(rows);
+  try {
+    var rows = await pool.query(query);
+  }
+  catch (e) {
+    console.log(e);
+    return;
+  }
+  
   // Sends course information for user back as json object
   res.setHeader('Content-Type', 'application/json');
   res.send(JSON.stringify({ courseRows : rows }));
@@ -142,9 +166,14 @@ app.post('/professorsections', async function (req, res) {
                   JOIN gititdonedb.PROFESSOR p on s.professorID = p.professorID
                   WHERE s.professorID = ${req.body["professorID"]}
                   ORDER BY c.courseID;`;
-  console.log(`In professorsections => ${query}`);
-  var rows = await pool.query(query);
-  console.log(rows);
+  try {
+    var rows = await pool.query(query);
+  }
+  catch (e) {
+    console.log(e);
+    return;
+  }
+  
   // Sends course information for user back as json object
   res.setHeader('Content-Type', 'application/json');
   res.send(JSON.stringify({ courseRows : rows }));
@@ -159,8 +188,14 @@ app.post('/usersincourse', async function (req, res) {
                   FROM gititdonedb.ROSTER AS r JOIN gititdonedb.STUDENT AS s ON r.studentID=s.studentID
                   WHERE r.courseID = ${req.body["courseID"]}
                   ORDER BY s.lastName, s.firstName, s.studentID;`;
-  console.log(`In userincourse => ${query}`);
-  var rows = await pool.query(query);
+  try {
+    var rows = await pool.query(query);
+  }
+  catch (e) {
+    console.log(e);
+    return;
+  }
+  
   console.log(rows);
   // Sends student list back as json object
   res.setHeader('Content-Type', 'application/json');
