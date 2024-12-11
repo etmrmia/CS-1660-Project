@@ -31,7 +31,7 @@ export class DataService {
   /**
    * Add formEmail and formPassword in constructor.
    * Calls database to check user based on password and email entered.
-   * Returns User Type or empty object if user doesn't exist.
+   * Returns User Type or undefined if user doesn't exist.
    */
   async getUserFromLogin() {
     const response = await fetch('/authuser', {
@@ -67,6 +67,7 @@ export class DataService {
    * List should have rows organized as { attendance_count, course_name }.
    */
   async getAttendanceForUser() {
+    console.log('Entering getAttendanceForUser');
     const response = await fetch('/userattendance', {
       method: 'POST',
       headers: {
@@ -75,8 +76,8 @@ export class DataService {
       body: JSON.stringify({ studentId: this.userId }),
     });
     const data = await response.json();
-
-    return data['attendanceRows'];
+    console.log(data);
+    return data['attendanceRows']['rows'];
   }
 
   /**
@@ -85,6 +86,7 @@ export class DataService {
    * List should have rows organized as { course_id, course_name }
    */
   async getCoursesForStudent() {
+    console.log('In getCoursesForStudent');
     const response = await fetch('/studentcourses', {
       method: 'POST',
       headers: {
@@ -93,8 +95,8 @@ export class DataService {
       body: JSON.stringify({ studentId: this.userId }),
     });
     const data = await response.json();
-
-    return data['courseRows'];
+    console.log(data['courseRows']['rows']);
+    return data['courseRows']['rows'];
   }
 
   /**
@@ -103,6 +105,7 @@ export class DataService {
    * List should have rows organized as { section_no, course_id, course_name }
    */
   async getCoursesForProfessor() {
+    console.log('In getCoursesForProfessor');
     const response = await fetch('/professorsections', {
       method: 'POST',
       headers: {
@@ -111,8 +114,8 @@ export class DataService {
       body: JSON.stringify({ professorID: this.userId }),
     });
     const data = await response.json();
-
-    return data['courseRows'];
+    console.log(data['courseRows']['rows']);
+    return data['courseRows']['rows'];
   }
 
   /**
@@ -120,6 +123,7 @@ export class DataService {
    * Takes a course id and returns list of users in course
    */
   async getStudentsInCourse() {
+    console.log('In getStudentsInCourse');
     const response = await fetch('/usersincourse', {
       method: 'POST',
       headers: {
@@ -128,7 +132,7 @@ export class DataService {
       body: JSON.stringify({ courseID: this.courseId }),
     });
     const data = await response.json();
-
-    return data['studentList'];
+    console.log(data);
+    return data['studentList']['rows'];
   }
 }

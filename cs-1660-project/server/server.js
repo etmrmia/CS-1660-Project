@@ -62,7 +62,6 @@ async function closeDB(pool) {
  * Endpoint returning user information and boolean with existence status.
 */
 app.post("/authuser", async function (req, res) {
-  console.log(req);
   const studentQuery = `SELECT firstName, lastName, studentID FROM gititdonedb.student 
     WHERE email = '${req.body["email"]}' AND password = '${req.body["password"]}';`;
   const profQuery = `SELECT firstName, lastName, professorID FROM gititdonedb.professor 
@@ -70,8 +69,6 @@ app.post("/authuser", async function (req, res) {
   var isStudent = false, idData = 0;
   // Runs query for student information
   var rows = await pool.query(studentQuery);
-  console.log("result of rows pool query")
-  console.log(rows);
   // If no rows found, runs professor query
   if (rows.rowCount < 1) {
     rows = await pool.query(profQuery);
@@ -88,7 +85,6 @@ app.post("/authuser", async function (req, res) {
   else {
     idData = rows.rows[0]["professorid"];
   }
-  
 
   // Sends user information back and returns exists as true
   res.setHeader('Content-Type', 'application/json');
@@ -105,12 +101,13 @@ app.post("/authuser", async function (req, res) {
 app.post('/userattendance', async function (req, res) {
   // Queries for number of attendances a student per class
   const query = `SELECT COUNT(DISTINCT a.attendanceDate) AS attendance, c.courseName AS course
-                  FROM ATTENDANCE AS a JOIN COURSE AS c ON a.courseID=c.courseID
+                  FROM gititdonedb.ATTENDANCE AS a JOIN gititdonedb.COURSE AS c ON a.courseID=c.courseID
                   WHERE a.studentID = ${req.body["studentId"]}
                   GROUP BY c.courseName
                   ORDER BY c.courseName;`;
+  console.log(`In userattendance => ${query}`);
   var rows = await pool.query(query);
-
+  console.log(rows);
   // Sends user information back as a json object
   res.setHeader('Content-Type', 'application/json');
   res.send(JSON.stringify({ attendanceRows : rows }));
@@ -122,13 +119,14 @@ app.post('/userattendance', async function (req, res) {
 app.post('/studentcourses', async function (req, res) {
   // Queries for course numbers and names where student is listed on roster
   const query = `SELECT s.sectionNo, c.courseID, c.courseName, p.professorID, p.firstName, p.lastName
-                  FROM ROSTER AS r JOIN COURSE AS c ON r.courseID=c.courseID
-                  JOIN SECTIONS AS s ON s.courseID = r.courseID
-                  JOIN PROFESSOR p on s.professorID = p.professorID
+                  FROM gititdonedb.ROSTER AS r JOIN gititdonedb.COURSE AS c ON r.courseID=c.courseID
+                  JOIN gititdonedb.SECTIONS AS s ON s.courseID = r.courseID
+                  JOIN gititdonedb.PROFESSOR p on s.professorID = p.professorID
                   WHERE r.studentID = ${req.body["studentId"]}
                   ORDER BY c.courseID;`;
+  console.log(`In studentcourses => ${query}`);
   var rows = await pool.query(query);
-
+  console.log(rows);
   // Sends course information for user back as json object
   res.setHeader('Content-Type', 'application/json');
   res.send(JSON.stringify({ courseRows : rows }));
@@ -140,12 +138,13 @@ app.post('/studentcourses', async function (req, res) {
 app.post('/professorsections', async function (req, res) {
   // Queries for course numbers and names where student is listed on roster
   const query = `SELECT s.sectionNo, c.courseID, c.courseName, p.professorID, p.firstName, p.lastName
-                  FROM SECTIONS AS s JOIN COURSE AS c ON s.courseID=c.courseID
-                  JOIN PROFESSOR p on s.professorID = p.professorID
+                  FROM gititdonedb.SECTIONS AS s JOIN gititdonedb.COURSE AS c ON s.courseID=c.courseID
+                  JOIN gititdonedb.PROFESSOR p on s.professorID = p.professorID
                   WHERE s.professorID = ${req.body["professorID"]}
                   ORDER BY c.courseID;`;
+  console.log(`In professorsections => ${query}`);
   var rows = await pool.query(query);
-
+  console.log(rows);
   // Sends course information for user back as json object
   res.setHeader('Content-Type', 'application/json');
   res.send(JSON.stringify({ courseRows : rows }));
@@ -157,11 +156,12 @@ app.post('/professorsections', async function (req, res) {
 app.post('/usersincourse', async function (req, res) {
   // Queries for student's first and last names in given course
   const query = `SELECT s.firstName, s.lastName
-                  FROM ROSTER AS r JOIN STUDENT AS s ON r.studentID=s.studentID
+                  FROM gititdonedb.ROSTER AS r JOIN gititdonedb.STUDENT AS s ON r.studentID=s.studentID
                   WHERE r.courseID = ${req.body["courseID"]}
                   ORDER BY s.lastName, s.firstName, s.studentID;`;
+  console.log(`In userincourse => ${query}`);
   var rows = await pool.query(query);
-
+  console.log(rows);
   // Sends student list back as json object
   res.setHeader('Content-Type', 'application/json');
   res.send(JSON.stringify({ studentList : rows }));
@@ -189,16 +189,3 @@ app.post('/qrcode', async (req, res) => {
 )
 
 });
-
-// TODO: Create endpoint that will store DB elements after QR code has been scanned 
-// The Front End will call this API after the QR code has been scanned, and pass 
-// to it the sectionNo, courseID, studentID and timestamp of when QR was scanned 
-// This information will then be stored in the DB to officially mark the student present 
-// Endpoint to insert data
-// Below is WIP 
-// app.post('/recordAttendance', async (req, res) => {
-//   try {
-//   } catch (error) {
-//     console.error(error);
-//   }
-// });
