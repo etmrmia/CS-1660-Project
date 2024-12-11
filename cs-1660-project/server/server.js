@@ -61,23 +61,29 @@ app.post("/authuser", async function (req, res) {
     WHERE email = '${req.body["email"]}' AND password = '${req.body["password"]}';`;
   const profQuery = `SELECT firstName, lastName FROM gititdonedb.professor 
     WHERE email = '${req.body["email"]}' AND password = '${req.body["password"]}';`;
-
+  var userType = '';
   // Runs query for student information
   var rows = await pool.query(studentQuery);
   // If no rows found, runs professor query
   if (rows.rowCount < 1) {
     rows = await pool.query(profQuery);
   }
+  else {
+    userType = 'Student';
+  }
   // If user does not exist in either query, returns exists as false
   if (rows.rowCount < 1) {
     res.send(JSON.stringify({ exists : false }));
     return;
   }
+  else {
+    userType = 'Professor';
+  }
 
   // Sends user information back and returns exists as true
   res.setHeader('Content-Type', 'application/json');
   // closeDB(pool);
-  res.send(JSON.stringify({ exists : true, message : 'Query executed'}));
+  res.send(JSON.stringify({ exists : true, message : 'Query executed', type : userType }));
 });
 
 // Endpoint encodes qr code as Base64 string and sends this information
