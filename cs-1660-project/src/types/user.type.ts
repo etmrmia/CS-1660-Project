@@ -3,5 +3,6 @@ export type User = {
   firstName: string;
   middleInitial?: string | null;
   lastName: string;
+  email: string;
   isStudent: boolean;
 };

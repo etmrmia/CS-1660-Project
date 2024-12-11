@@ -44,23 +44,13 @@ export class LoginComponent {
 
   constructor(private router: Router) {}
 
-  async onSubmit(): Promise<void> {
-    const response = await fetch('/authuser', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({email : this.loginForm.controls["email"].value,
-                            password : this.loginForm.controls["password"].value })
-    });
-    const data = await response.json();
-
-    // User login authentication
-    if (this.loginForm.valid && data["exists"]) {
+  onSubmit(): void {
+    if (this.loginForm.valid) {
+      // TODO: Add user login authentication
       this.userStore.loadUserInfo();
       this.router.navigate(['/home']);
     } else {
-      alert('User not found.');
+      console.log('Form is not valid');
     }
   }
 }

@@ -46,7 +46,9 @@ const pool = new Pool({
   max: 5,
 });
 
-// Both pools and connectors should be closed after done with them
+/**
+ * Both pools and connectors should be closed after done with them.
+*/
 async function closeDB(pool) {
   await pool.end();
   connector.close();
@@ -56,12 +58,15 @@ async function closeDB(pool) {
 // const {rows} = await pool.query('SELECT * FROM gititdonedb.student');
 // console.table(rows); // prints all records in student table 
 
+/**
+ * Endpoint returning user information and boolean with existence status.
+*/
 app.post("/authuser", async function (req, res) {
-  const studentQuery = `SELECT firstName, lastName FROM gititdonedb.student 
+  const studentQuery = `SELECT firstName, lastName, studentID FROM gititdonedb.student 
     WHERE email = '${req.body["email"]}' AND password = '${req.body["password"]}';`;
-  const profQuery = `SELECT firstName, lastName FROM gititdonedb.professor 
+  const profQuery = `SELECT firstName, lastName, professorID FROM gititdonedb.professor 
     WHERE email = '${req.body["email"]}' AND password = '${req.body["password"]}';`;
-  var userType = '';
+  var isStudent = false, idData = 0;
   // Runs query for student information
   var rows = await pool.query(studentQuery);
   // If no rows found, runs professor query
@@ -69,7 +74,8 @@ app.post("/authuser", async function (req, res) {
     rows = await pool.query(profQuery);
   }
   else {
-    userType = 'Student';
+    isStudent = true;
+    idData = rows[0]["studentID"];
   }
   // If user does not exist in either query, returns exists as false
   if (rows.rowCount < 1) {
@@ -77,13 +83,65 @@ app.post("/authuser", async function (req, res) {
     return;
   }
   else {
-    userType = 'Professor';
+    idData = rows[0]["professorID"];
   }
 
   // Sends user information back and returns exists as true
   res.setHeader('Content-Type', 'application/json');
-  // closeDB(pool);
-  res.send(JSON.stringify({ exists : true, message : 'Query executed', type : userType }));
+  res.send(JSON.stringify({ exists : true, 
+                            firstName : rows[0]["firstName"],
+                            lastName : rows[0]["lastName"],
+                            id : idData,
+                            isStudentValue : isStudent }));
+});
+
+/**
+ * Endpoint that queries user attendance based on given user ID and grouped by course.
+*/
+app.post('/userattendance', async function (req, res) {
+  // Queries for number of attendances a student per class
+  const query = `SELECT COUNT(DISTINCT a.attendanceDate) AS attendance, c.courseName AS course
+                  FROM ATTENDANCE AS a JOIN COURSE AS c ON a.courseID=c.courseID
+                  WHERE a.studentID = ${req.body["studentId"]}
+                  GROUP BY c.courseName
+                  ORDER BY c.courseName;`;
+  var rows = await pool.query(query);
+
+  // Sends user information back as a json object
+  res.setHeader('Content-Type', 'application/json');
+  res.send(JSON.stringify({ attendanceRows : rows }));
+});
+
+/**
+ * Endpoint accepting a user id and returning list of courses user attends.
+*/
+app.post('/studentcourses', async function (req, res) {
+  // Queries for course numbers and names where student is listed on roster
+  const query = `SELECT c.courseID, c.courseName
+                  FROM ROSTER AS r JOIN COURSE AS c ON r.courseID=c.courseID
+                  WHERE r.studentID = ${req.body["studentId"]}
+                  ORDER BY c.courseID;`;
+  var rows = await pool.query(query);
+
+  // Sends course information for user back as json object
+  res.setHeader('Content-Type', 'application/json');
+  res.send(JSON.stringify({ courseRows : rows }));
+});
+
+/**
+ * Endpoint taking a course id and returning list of students attending course.
+*/
+app.post('/usersincourse', async function (req, res) {
+  // Queries for student's first and last names in given course
+  const query = `SELECT s.firstName, s.lastName
+                  FROM ROSTER AS r JOIN STUDENT AS s ON r.studentID=s.studentID
+                  WHERE r.courseID = ${req.body["courseID"]}
+                  ORDER BY s.lastName, s.firstName, s.studentID;`;
+  var rows = await pool.query(query);
+
+  // Sends student list back as json object
+  res.setHeader('Content-Type', 'application/json');
+  res.send(JSON.stringify({ studentList : rows }));
 });
 
 // Endpoint encodes qr code as Base64 string and sends this information
