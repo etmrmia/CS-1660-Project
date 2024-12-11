@@ -88,17 +88,22 @@ app.post("/authuser", async function (req, res) {
   }
   else {
     isStudent = true;
-    idData = rows.rows[0]["studentid"];
+    idData = rows['rows'][0]['studentid'];
   }
   // If user does not exist in either query, returns exists as false
   if (rows.rowCount < 1) {
     res.send(JSON.stringify({ exists : false }));
     return;
   }
-  else {
-    idData = rows.rows[0]["professorid"];
+  else if (!isStudent) {
+    idData = rows['rows'][0]["professorid"];
   }
 
+  console.log(JSON.stringify({ exists : true, 
+    firstName : rows.rows[0]["firstname"],
+    lastName : rows.rows[0]["lastname"],
+    id : idData,
+    isStudentValue : isStudent }));
   // Sends user information back and returns exists as true
   res.setHeader('Content-Type', 'application/json');
   res.send(JSON.stringify({ exists : true, 
