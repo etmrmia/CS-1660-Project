@@ -1,24 +1,6 @@
 import { Injectable, Inject, Optional } from '@angular/core';
 import { User } from '../types/user.type';
 
-/**
- * Hi Emma! This is Alex from the past speaking...
- * I tried to make this service as self documenting as possible
- * and please enjoy the fact that I made every function javadoc like
- * so you could see descriptions as you are typing out function names.
- *
- * WHAT NEEDS DONE: connecting the pieces (and low key testing should
- * only be a syntax error but if it's a problem with server side it will
- * tell you in the console - believe me it was yelling at me a lot today).
- * I also did not reference service anywhere - I didn't wanna assume where
- * you'd use it on 2AM brain.
- *
- * Also I did run the queries through a postgresql simulator so there
- * shouldn't be any issues there (if there is idek wtf you do)
- *
- * GOOD LUCK and hopefully you got some sleep :).
- */
-
 @Injectable({
   providedIn: 'root',
 })
