@@ -44,11 +44,18 @@ export class LoginComponent {
 
   constructor(private router: Router) {}
 
-  onSubmit(): void {
+  async onSubmit(): Promise<void> {
     if (this.loginForm.valid) {
-      // TODO: Add user login authentication
-      this.userStore.loadUserInfo();
-      this.router.navigate(['/home']);
+      const validLogin = await this.userStore
+        .loadUserInfo(
+          this.loginForm.controls['email'].value,
+          this.loginForm.controls['password'].value
+        )
+        .then((val) => {
+          if (val) {
+            this.router.navigate(['/home']);
+          }
+        });
     } else {
       console.log('Form is not valid');
     }

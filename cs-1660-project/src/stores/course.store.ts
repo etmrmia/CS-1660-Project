@@ -7,8 +7,9 @@ import {
   withState,
 } from '@ngrx/signals';
 import { CourseBlockInfo } from '../types/course-block-info.type';
-import { computed } from '@angular/core';
+import { computed, inject } from '@angular/core';
 import { Course } from '../types/course.type';
+import { DataService } from '../app/data.service';
 
 type CourseState = {
   courses: Course[];
@@ -36,50 +37,28 @@ export const CourseStore = signalStore(
       );
     }),
   })),
-  withMethods((store) => ({
+  withMethods((store, dataService = inject(DataService)) => ({
     setOrder(order: 'asc' | 'desc'): void {
       patchState(store, (state) => ({ filter: { ...state.filter, order } }));
     },
     setCourse(course: Course | undefined): void {
       patchState(store, (state) => ({ courseChosen: course }));
     },
-    loadCourses(id: number, isStudent: boolean): void {
+    async loadCourses(id: number, isStudent: boolean): Promise<void> {
       patchState(store, (state) => ({
-        courses: [
-          {
-            courseName: 'Cloud Computing',
-            courseID: 'CS 1660',
-            professor: {
-              id: 1,
-              firstName: 'Dan',
-              lastName: 'Mahoney',
-              isStudent: false,
-            },
-            sectionNo: 1,
-          },
-          {
-            courseName: 'Database Management Systems',
-            courseID: 'CS 1555',
-            professor: {
-              id: 2,
-              firstName: 'Brian',
-              lastName: 'Nixon',
-              isStudent: false,
-            },
-            sectionNo: 2,
-          },
-          {
-            courseName: 'Machine Learning',
-            courseID: 'CS 1675',
-            professor: {
-              id: 3,
-              firstName: 'Patrick',
-              lastName: 'Skeba',
-              isStudent: false,
-            },
-            sectionNo: 4,
-          },
-        ],
+        isLoading: true,
+      }));
+      dataService.userId = id;
+      let userCourses = [];
+      if (isStudent) {
+        userCourses = await dataService.getCoursesForStudent();
+      } else {
+        userCourses = await dataService.getCoursesForProfessor();
+      }
+
+      patchState(store, (state) => ({
+        courses: userCourses,
+        isLoading: false,
       }));
     },
   })),

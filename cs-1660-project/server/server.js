@@ -62,6 +62,7 @@ async function closeDB(pool) {
  * Endpoint returning user information and boolean with existence status.
 */
 app.post("/authuser", async function (req, res) {
+  console.log(req);
   const studentQuery = `SELECT firstName, lastName, studentID FROM gititdonedb.student 
     WHERE email = '${req.body["email"]}' AND password = '${req.body["password"]}';`;
   const profQuery = `SELECT firstName, lastName, professorID FROM gititdonedb.professor 
@@ -69,13 +70,15 @@ app.post("/authuser", async function (req, res) {
   var isStudent = false, idData = 0;
   // Runs query for student information
   var rows = await pool.query(studentQuery);
+  console.log("result of rows pool query")
+  console.log(rows);
   // If no rows found, runs professor query
   if (rows.rowCount < 1) {
     rows = await pool.query(profQuery);
   }
   else {
     isStudent = true;
-    idData = rows[0]["studentID"];
+    idData = rows.rows[0]["studentid"];
   }
   // If user does not exist in either query, returns exists as false
   if (rows.rowCount < 1) {
@@ -83,14 +86,15 @@ app.post("/authuser", async function (req, res) {
     return;
   }
   else {
-    idData = rows[0]["professorID"];
+    idData = rows.rows[0]["professorid"];
   }
+  
 
   // Sends user information back and returns exists as true
   res.setHeader('Content-Type', 'application/json');
   res.send(JSON.stringify({ exists : true, 
-                            firstName : rows[0]["firstName"],
-                            lastName : rows[0]["lastName"],
+                            firstName : rows.rows[0]["firstname"],
+                            lastName : rows.rows[0]["lastname"],
                             id : idData,
                             isStudentValue : isStudent }));
 });
@@ -117,9 +121,28 @@ app.post('/userattendance', async function (req, res) {
 */
 app.post('/studentcourses', async function (req, res) {
   // Queries for course numbers and names where student is listed on roster
-  const query = `SELECT c.courseID, c.courseName
+  const query = `SELECT s.sectionNo, c.courseID, c.courseName, p.professorID, p.firstName, p.lastName
                   FROM ROSTER AS r JOIN COURSE AS c ON r.courseID=c.courseID
+                  JOIN SECTIONS AS s ON s.courseID = r.courseID
+                  JOIN PROFESSOR p on s.professorID = p.professorID
                   WHERE r.studentID = ${req.body["studentId"]}
+                  ORDER BY c.courseID;`;
+  var rows = await pool.query(query);
+
+  // Sends course information for user back as json object
+  res.setHeader('Content-Type', 'application/json');
+  res.send(JSON.stringify({ courseRows : rows }));
+});
+
+/**
+ * Endpoint accepting a user id and returning list of courses and sections user attends.
+*/
+app.post('/professorsections', async function (req, res) {
+  // Queries for course numbers and names where student is listed on roster
+  const query = `SELECT s.sectionNo, c.courseID, c.courseName, p.professorID, p.firstName, p.lastName
+                  FROM SECTIONS AS s JOIN COURSE AS c ON s.courseID=c.courseID
+                  JOIN PROFESSOR p on s.professorID = p.professorID
+                  WHERE s.professorID = ${req.body["professorID"]}
                   ORDER BY c.courseID;`;
   var rows = await pool.query(query);
 

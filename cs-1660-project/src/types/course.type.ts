@@ -1,8 +1,10 @@
-import { User } from "./user.type";
+import { User } from './user.type';
 
 export type Course = {
   courseID: string;
   courseName: string;
   sectionNo: number;
-  professor: User;
+  professorID: number;
+  professorFirstName: string;
+  professorLastName: string;
 };
