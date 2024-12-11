@@ -6,7 +6,7 @@
         <h3 id="presentMessage">You have been marked present!</h3>
     </ng-container>
     <img id="qrcode" [src]="urlToEncode" alt="" >
-    <ng-container *ngIf="!user()?.isStudent"> <!-- remeber to change user role to is student condition-->
+    <ng-container *ngIf="user()?.isStudent"> <!-- remeber to change user role to is student condition-->
         <button id="testqr" type="button" (click)="scanqrcode()">Scan QR Code</button>
         <ng-container *ngIf="scanFlag===true">
         </ng-container>

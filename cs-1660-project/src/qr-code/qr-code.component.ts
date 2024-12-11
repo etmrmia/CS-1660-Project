@@ -31,23 +31,32 @@ import { listenerCount } from 'events';
 
 
     ngOnInit(){
-    if(!this.user()?.isStudent){
+    if(this.user()?.isStudent){
+
         const studentJSON = {
           sectionNo: this.course()?.sectionNo,         // replace with current user's section number
           courseID: this.course()?.courseID,   // replace with current user's courseID
           studentID: this.user()?.id,         // replace with user's studentID
-          attendanceDate: new Date().toISOString()    // use current date to check 
         }
+
+        // TEST ENDPOINT 
+        // const studentJSON = {
+        //   sectionNo: 1,         // replace with current user's section number
+        //   courseID: "CS1660",   // replace with current user's courseID
+        //   studentID: 1,         // replace with user's studentID
+        // }
         this.checkIfAttended(studentJSON);
       }
     else{
+      console.log("IS PROFESSOR");
       this.getQrCodeURL();
+      this.qrScannerVisible = false;
     } 
     }
 
     async checkIfAttended(studentData:any){
-      console.log("Checking to see if student attended in UI");
-      console.log(studentData);
+      // console.log("Checking to see if student attended in UI");
+      // console.log(studentData);
       const response = await fetch('/getAttendance', {
         method: 'POST',
         headers: {
@@ -56,11 +65,15 @@ import { listenerCount } from 'events';
         body: JSON.stringify(studentData)
       });
       const data = await response.json();
-      console.log(data.attended);
+      
+      // VERIFY ENDPOINT
+      // console.log(data.attended);
+      // console.log("CONVERTED ATTENDED");
       // Implement if here: if respone is no then this.getQrCodeURL else this.clearHTML
-      if(data['attended'] == 'False'){
+      if(String(data.attended) === 'True'){
         this.clearHTML();
       } else{
+        this.clearHTML();
         this.getQrCodeURL();
       }
       
@@ -72,6 +85,12 @@ import { listenerCount } from 'events';
         courseID: this.course()?.courseID,         // replace with user's courseID - not sure how to do this
         profID: this.course()?.professor.id
       }
+      // TEST ENDPOINT 
+      // const jsonObject =  {
+      //   sectionNo: 1,               // replace with user's section number - not sure how to do this
+      //   courseID: 'CS1660',         // replace with user's courseID - not sure how to do this
+      //   profID: 1
+      // }
       const response = await fetch('/qrcode', {
         method: 'POST',
         headers: {
@@ -86,7 +105,7 @@ import { listenerCount } from 'events';
 
     scanqrcode(){
       this.scanFlag = true;
-      console.log("IN METHOD");
+      // console.log("IN METHOD");
       if(document.getElementById("qr-reader")){
         this.html5QrcodeScanner = new Html5QrcodeScanner('qr-reader', { fps: 10, qrbox: 
           { width: 250, 
@@ -101,10 +120,10 @@ import { listenerCount } from 'events';
       
     onScanSuccess(text: any, result: any) {
       this.html5QrcodeScanner.clear();
-      console.log("Text is ");
+      // console.log("Text is ");
       console.log(text);
-      console.log("Result is");
-      console.log(result);
+      // console.log("Result is");
+      // console.log(result);
       // Remove corresponding elements in the HTML file 
       let removeElement = document.getElementById("qr-reader");
       if(removeElement)
@@ -136,18 +155,24 @@ import { listenerCount } from 'events';
  
   async postResult(result:any){
     const jsonObject = JSON.parse(result);
-    jsonObject.attendancedate = new Date().toISOString();
     jsonObject.studentID = this.user()?.id;
     delete jsonObject.profID; 
-    console.log("Recording attendance");
-    console.log(jsonObject);
+    // console.log("Recording attendance");
+    // console.log(jsonObject);
 
+    // TEST DATA 
+    // const studentJSON = {
+    //   sectionNo: 1,         // replace with current user's section number
+    //   courseID: "CS1660",   // replace with current user's courseID
+    //   studentID: 1,         // replace with user's studentID
+    // }
+    
     const response = await fetch('/recordAttendance', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(jsonObject)
+      body: JSON.stringify(jsonObject),
     });
   }
   
