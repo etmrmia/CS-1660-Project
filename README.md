@@ -6,10 +6,10 @@ Our application, GitItDone, functions as a QR scanner to track student attendanc
 their students to scan the qr code in order to register their attendance for the day. Students will then be prompted by their camera to scan the QR code. Upon
 scanning, a student's attendance for that course and section will be recorded. Professors are able to track the attendance of students in their course sections and
 students are able to track their own individual attendance. 
-We used postgreSQL for our database, node.js for our backend, and angular for our frontend. 
+We used postgreSQL for our database, node.js for our backend, and angular for our frontend. Logs displaying our files are stored in the logs folder to show active runs of our GCP services to supplement the functionality due to the high amount of credits consumed by the services.
 
 ## Instructions to Use Application
-The Git It Done QR Attendance Tracker application can be found at [this link](https://git-it-done-1085175978926.us-central1.run.app/). After following the link, it is recommended the user use the following test profiles to use the application but other profiles are available in the [SQL Sample Data file](https://github.com/etmrmia/CS-1660-Project/blob/main/sample-data.sql) within the attached repository:
+The Git It Done QR Attendance Tracker application intitially ran at [this link](https://git-it-done-1085175978926.us-central1.run.app/) but now runs on locally due to credit limitations on the semester. To run this locally, clone a local instance of the repository and navigate to [this file](https://github.com/etmrmia/CS-1660-Project/blob/main/cs-1660-project/server/server.js).  After following the link, run the server by typing ```node server.js``` into the console. If errors occur, try navigating out one folder by using ```cd ..``` and running ```ng build --configuration production``` and then navigating back into the server folder to attempt to run the local instance again. It is recommended the user use the following test profiles to use the application but other profiles are available in the [SQL Sample Data file](https://github.com/etmrmia/CS-1660-Project/blob/main/sample-data.sql) within the attached repository:
 > | User              | Email            | Password |
 > |:-----------------:|:----------------:|:--------:|
 > |Test Student User  |test1@pitt.edu    |11111111  |
