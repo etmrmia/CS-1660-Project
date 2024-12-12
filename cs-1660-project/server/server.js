@@ -56,7 +56,7 @@ async function closeDB(pool) {
 
 
 // Endpoint encodes qr code as Base64 string and sends this information
-app.post('/qrcode', express.json(), async (req, res) => {
+app.post('/qrcode',  async (req, res) => {
 
   console.log("Getting qr code");
   console.log(req.body);
