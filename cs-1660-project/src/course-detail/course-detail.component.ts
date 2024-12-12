@@ -44,15 +44,14 @@ export class CourseDetailComponent {
     let allStudentAttendance: StudentAttendanceDisplay[] = [];
 
     this.allStudents().forEach((s) => {
-      const studentAttendance = this.userAttendance().filter(
-        (a) => a.studentid === s.id
+      const studentAttendance = this.allAttendance().find(
+        (a) => a.sid === s.studentid
       );
       allStudentAttendance.push({
-        id: s.id,
-        firstName: s.firstName,
-        middleInitial: s.middleInitial,
-        lastName: s.lastName,
-        totalAttendance: studentAttendance.length,
+        id: s.studentid,
+        firstName: s.firstname,
+        lastName: s.lastname,
+        totalAttendance: studentAttendance?.attendance ?? 0,
       });
     });
     return allStudentAttendance;
@@ -60,10 +59,13 @@ export class CourseDetailComponent {
 
   constructor(private route: ActivatedRoute) {
     if (this.user()?.isStudent) {
-      this.userStore.loadStudentAttendance(this.user()?.id);
+      this.userStore.loadStudentAttendance(this.user()?.id ?? 0);
     } else {
-      this.userStore.loadStudentsInCourse(this.course()?.courseid);
-      this.userStore.loadAllAttendanceInCourse(this.course()?.courseid);
+      this.userStore.loadStudentsInCourse(this.course()?.courseid ?? '');
+      this.userStore.loadAllAttendanceInCourse(
+        this.course()?.courseid ?? '',
+        this.course()?.sectionno ?? 0
+      );
     }
   }
 
@@ -82,8 +84,3 @@ export class CourseDetailComponent {
     console.log(data);
   }
 }
-
-// TODO: add QR Scanner component to course detail component & create event on scan
-// To call API in backend to store the information scanned from the QR code
-// NOTE: this functionality should only be available for STUDENTS
-// i.e. SCAN FUNCTIONALITY WILL NOT BE AVAILABLE TO PROFESSOR ROLES

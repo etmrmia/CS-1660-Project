@@ -138,6 +138,28 @@ app.post('/userattendance', async function (req, res) {
 });
 
 /**
+ * Endpoint that queries all student attendance based on given course ID grouped by student ID.
+*/
+app.post('/courseattendance', async function (req, res) {
+    try {
+  // Queries for number of attendances a student per class
+  const query = `SELECT COUNT(a.attendanceDate) AS attendance, a.studentID AS sid FROM gititdonedb.ATTENDANCE a
+WHERE a.courseID = '${req.body["courseId"]}' AND a.sectionNo = ${req.body["sectionNo"]}
+    GROUP BY studentID;`;
+  
+    var rows = await pool.query(query);
+  
+  // Sends user information back as a json object
+  res.setHeader('Content-Type', 'application/json');
+  res.send(JSON.stringify({ courseAttendanceRows : rows }));
+  }
+  catch (e) {
+    console.log(e);
+    return;
+  } 
+});
+
+/**
  * Endpoint accepting a user id and returning list of courses user attends.
 */
 app.post('/studentcourses', async function (req, res) {
@@ -189,14 +211,13 @@ app.post('/professorsections', async function (req, res) {
 */
 app.post('/usersincourse', async function (req, res) {
   // Queries for student's first and last names in given course
-  const query = `SELECT s.firstName, s.lastName
+  const query = `SELECT s.firstName, s.lastName, s.studentID
                   FROM gititdonedb.ROSTER AS r JOIN gititdonedb.STUDENT AS s ON r.studentID=s.studentID
-                  WHERE r.courseID = ${req.body["courseID"]}
+                  WHERE r.courseID = '${req.body["courseID"]}'
                   ORDER BY s.lastName, s.firstName, s.studentID;`;
   console.log(`In usersincourse => ${query}`);
   try {
     var rows = await pool.query(query);
-    console.log(rows);
     // Sends student list back as json object
     res.setHeader('Content-Type', 'application/json');
     res.send(JSON.stringify({ studentList : rows }));

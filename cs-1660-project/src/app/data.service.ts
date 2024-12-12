@@ -9,7 +9,8 @@ export class DataService {
     @Inject('formEmail') @Optional() public formEmail?: string,
     @Inject('formPassword') @Optional() public formPassword?: string,
     @Inject('userId') @Optional() public userId?: number,
-    @Inject('courseId') @Optional() public courseId?: string
+    @Inject('courseId') @Optional() public courseId?: string,
+    @Inject('sectionNo') @Optional() public sectionNo?: number
   ) {
     this.formEmail = formEmail || '';
     this.formPassword = formPassword || '';
@@ -79,6 +80,32 @@ export class DataService {
       return undefined;
     }
     return data['attendanceRows']['rows'];
+  }
+
+  /**
+   * Add a user id when initializing service
+   * Takes a user id and returns a list of classes and attendance
+   * List should have rows organized as { attendance_count, course_name }.
+   */
+  async getAttendanceForCourse() {
+    const response = await fetch('/courseattendance', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        courseId: this.courseId,
+        sectionNo: this.sectionNo,
+      }),
+    });
+    const data = await response.json();
+    if (data === undefined || data['courseAttendanceRows'] === undefined) {
+      console.log('undefined');
+      return undefined;
+    }
+    console.log('data for new attendance course:');
+    console.log(data);
+    return data['courseAttendanceRows']['rows'];
   }
 
   /**
