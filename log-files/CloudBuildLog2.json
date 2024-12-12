@@ -1,0 +1,4338 @@
+[
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "status": {},
+      "authenticationInfo": {
+        "principalEmail": "1085175978926@cloudbuild.gserviceaccount.com"
+      },
+      "requestMetadata": {
+        "requestAttributes": {},
+        "destinationAttributes": {}
+      },
+      "serviceName": "cloudbuild.googleapis.com",
+      "methodName": "google.devtools.cloudbuild.v1.CloudBuild.CreateBuild",
+      "authorizationInfo": [
+        {
+          "resource": "projects/fine-effect-435423-b8",
+          "permission": "cloudbuild.builds.create",
+          "granted": true,
+          "resourceAttributes": {},
+          "permissionType": "ADMIN_WRITE"
+        }
+      ],
+      "resourceName": "projects/fine-effect-435423-b8/builds",
+      "resourceLocation": {
+        "currentLocations": [
+          "global"
+        ]
+      }
+    },
+    "insertId": "-n0x08nd102i",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "project_id": "fine-effect-435423-b8"
+      }
+    },
+    "timestamp": "2024-12-12T01:57:09.611013Z",
+    "severity": "NOTICE",
+    "logName": "projects/fine-effect-435423-b8/logs/cloudaudit.googleapis.com%2Factivity",
+    "operation": {
+      "id": "operations/build/fine-effect-435423-b8/MDI1NmQzNDEtZTIyMy00NmQ1LWI4NWYtZjUzZGQxMmQ0ZWI4",
+      "producer": "cloudbuild.googleapis.com",
+      "first": true
+    },
+    "receiveTimestamp": "2024-12-12T01:57:10.382149356Z"
+  },
+  {
+    "textPayload": "starting build \"0256d341-e223-46d5-b85f-f53dd12d4eb8\"\n",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-0",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "project_id": "fine-effect-435423-b8"
+      }
+    },
+    "timestamp": "2024-12-12T01:57:10.437253751Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "MAIN",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:57:11.491729386Z"
+  },
+  {
+    "textPayload": "FETCHSOURCE",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-1",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "project_id": "fine-effect-435423-b8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8"
+      }
+    },
+    "timestamp": "2024-12-12T01:57:10.437279480Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "MAIN",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:57:11.491729386Z"
+  },
+  {
+    "textPayload": "hint: Using 'master' as the name for the initial branch. This default branch name",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-2",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "project_id": "fine-effect-435423-b8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8"
+      }
+    },
+    "timestamp": "2024-12-12T01:57:10.990806738Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "gsutil:STDERR",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:57:11.491729386Z"
+  },
+  {
+    "textPayload": "hint: is subject to change. To configure the initial branch name to use in all",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-3",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "project_id": "fine-effect-435423-b8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8"
+      }
+    },
+    "timestamp": "2024-12-12T01:57:10.990938622Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "gsutil:STDERR",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:57:11.491729386Z"
+  },
+  {
+    "textPayload": "hint: of your new repositories, which will suppress this warning, call:",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-4",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "project_id": "fine-effect-435423-b8"
+      }
+    },
+    "timestamp": "2024-12-12T01:57:10.990953965Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "gsutil:STDERR"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:57:11.491729386Z"
+  },
+  {
+    "textPayload": "hint:",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-5",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "project_id": "fine-effect-435423-b8"
+      }
+    },
+    "timestamp": "2024-12-12T01:57:10.990956559Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "gsutil:STDERR"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:57:11.491729386Z"
+  },
+  {
+    "textPayload": "hint: \tgit config --global init.defaultBranch <name>",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-6",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "project_id": "fine-effect-435423-b8",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8"
+      }
+    },
+    "timestamp": "2024-12-12T01:57:10.990958951Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "gsutil:STDERR"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:57:11.491729386Z"
+  },
+  {
+    "textPayload": "hint:",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-7",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "project_id": "fine-effect-435423-b8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T01:57:10.990960480Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "gsutil:STDERR"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:57:11.491729386Z"
+  },
+  {
+    "textPayload": "hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-8",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "project_id": "fine-effect-435423-b8",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8"
+      }
+    },
+    "timestamp": "2024-12-12T01:57:10.990962153Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "gsutil:STDERR",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:57:11.491729386Z"
+  },
+  {
+    "textPayload": "hint: 'development'. The just-created branch can be renamed via this command:",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-9",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "project_id": "fine-effect-435423-b8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T01:57:10.990963820Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "gsutil:STDERR"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:57:11.491729386Z"
+  },
+  {
+    "textPayload": "hint:",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-10",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "project_id": "fine-effect-435423-b8"
+      }
+    },
+    "timestamp": "2024-12-12T01:57:10.991026982Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "gsutil:STDERR"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:57:11.491729386Z"
+  },
+  {
+    "textPayload": "hint: \tgit branch -m <name>",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-11",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "project_id": "fine-effect-435423-b8"
+      }
+    },
+    "timestamp": "2024-12-12T01:57:10.991029491Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "gsutil:STDERR",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:57:11.491729386Z"
+  },
+  {
+    "textPayload": "Initialized empty Git repository in /workspace/.git/",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-12",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "project_id": "fine-effect-435423-b8"
+      }
+    },
+    "timestamp": "2024-12-12T01:57:10.993079985Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "gsutil:STDOUT"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:57:11.491729386Z"
+  },
+  {
+    "textPayload": "From https://github.com/etmrmia/CS-1660-Project",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-13",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "project_id": "fine-effect-435423-b8"
+      }
+    },
+    "timestamp": "2024-12-12T01:57:17.451391844Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "gsutil:STDERR"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:57:18.448033475Z"
+  },
+  {
+    "textPayload": " * branch              682354b5c68f6117106e8e9b65ae4e2c530b35a7 -> FETCH_HEAD",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-14",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "project_id": "fine-effect-435423-b8",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T01:57:17.451414718Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "gsutil:STDERR"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:57:18.448033475Z"
+  },
+  {
+    "textPayload": "Updating files:  31% (9096/29134)\rUpdating files:  32% (9323/29134)\rUpdating files:  33% (9615/29134)\rUpdating files:  34% (9906/29134)\rUpdating files:  35% (10197/29134)\rUpdating files:  36% (10489/29134)\rUpdating files:  37% (10780/29134)\rUpdating files:  38% (11071/29134)\rUpdating files:  39% (11363/29134)\rUpdating files:  40% (11654/29134)\rUpdating files:  41% (11945/29134)\rUpdating files:  42% (12237/29134)\rUpdating files:  43% (12528/29134)\rUpdating files:  44% (12819/29134)\rUpdating files:  45% (13111/29134)\rUpdating files:  46% (13402/29134)\rUpdating files:  47% (13693/29134)\rUpdating files:  48% (13985/29134)\rUpdating files:  49% (14276/29134)\rUpdating files:  50% (14567/29134)\rUpdating files:  51% (14859/29134)\rUpdating files:  52% (15150/29134)\rUpdating files:  53% (15442/29134)\rUpdating files:  54% (15733/29134)\rUpdating files:  55% (16024/29134)\rUpdating files:  56% (16316/29134)\rUpdating files:  57% (16607/29134)\rUpdating files:  58% (16898/29134)\rUpdating files:  59% (17190/29134)\rUpdating files:  60% (17481/29134)\rUpdating files:  61% (17772/29134)\rUpdating files:  61% (18007/29134)\rUpdating files:  62% (18064/29134)\rUpdating files:  63% (18355/29134)\rUpdating files:  64% (18646/29134)\rUpdating files:  65% (18938/29134)\rUpdating files:  66% (19229/29134)\rUpdating files:  67% (19520/29134)\rUpdating files:  68% (19812/29134)\rUpdating files:  69% (20103/29134)\rUpdating files:  70% (20394/29134)\rUpdating files:  71% (20686/29134)\rUpdating files:  72% (20977/29134)\rUpdating files:  73% (21268/29134)\rUpdating files:  74% (21560/29134)\rUpdating files:  75% (21851/29134)\rUpdating files:  76% (22142/29134)\rUpdating files:  77% (22434/29134)\rUpdating files:  78% (22725/29134)\rUpdating files:  79% (23016/29134)\rUpdating files:  80% (23308/29134)\rUpdating files:  81% (23599/29134)\rUpdating files:  82% (23890/29134)\rUpdating files:  83% (24182/29134)\rUpdating files:  84% (24473/29134)\rUpdating files:  85% (24764/29134)\rUpdating files:  86% (25056/29134)\rUpdating files:  87% (25347/29134)\rUpdating files:  88% (25638/29134)\rUpdating files:  89% (25930/29134)\rUpdating files:  89% (26116/29134)\rUpdating files:  90% (26221/29134)\rUpdating files:  91% (26512/29134)\rUpdating files:  92% (26804/29134)\rUpdating files:  93% (27095/29134)\rUpdating files:  94% (27386/29134)\rUpdating files:  95% (27678/29134)\rUpdating files:  96% (27969/29134)\rUpdating files:  97% (28260/29134)\rUpdating files:  98% (28552/29134)\rUpdating files:  99% (28843/29134)\rUpdating files: 100% (29134/29134)\rUpdating files: 100% (29134/29134), done.",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-15",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "project_id": "fine-effect-435423-b8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T01:57:20.803059834Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "gsutil:STDERR"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:57:21.452851682Z"
+  },
+  {
+    "textPayload": "HEAD is now at 682354b5 Add files via upload",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-16",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "project_id": "fine-effect-435423-b8",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8"
+      }
+    },
+    "timestamp": "2024-12-12T01:57:20.869854202Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "gsutil:STDOUT"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:57:21.452851682Z"
+  },
+  {
+    "textPayload": "BUILD",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-17",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "project_id": "fine-effect-435423-b8"
+      }
+    },
+    "timestamp": "2024-12-12T01:57:22.853217835Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "MAIN",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:57:23.450989302Z"
+  },
+  {
+    "textPayload": "Starting Step #0",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-18",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "project_id": "fine-effect-435423-b8"
+      }
+    },
+    "timestamp": "2024-12-12T01:57:23.461258418Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "MAIN",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:57:24.449572608Z"
+  },
+  {
+    "textPayload": "Step #0: Already have image (with digest): gcr.io/cloud-builders/docker",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-19",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "project_id": "fine-effect-435423-b8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8"
+      }
+    },
+    "timestamp": "2024-12-12T01:57:23.467368388Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #0",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:57:24.449572608Z"
+  },
+  {
+    "textPayload": "Step #0: Sending build context to Docker daemon  421.1MB\r\r",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-20",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "project_id": "fine-effect-435423-b8",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8"
+      }
+    },
+    "timestamp": "2024-12-12T01:57:32.882246419Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #0",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:57:33.452008288Z"
+  },
+  {
+    "textPayload": "Step #0: Step 1/11 : FROM node:20-alpine AS builder",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-21",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "project_id": "fine-effect-435423-b8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T01:57:32.910183908Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #0",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:57:33.452008288Z"
+  },
+  {
+    "textPayload": "Step #0: 20-alpine: Pulling from library/node",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-22",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "project_id": "fine-effect-435423-b8",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T01:57:34.248957641Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #0",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:57:34.453748850Z"
+  },
+  {
+    "textPayload": "Step #0: 38a8310d387e: Already exists",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-23",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "project_id": "fine-effect-435423-b8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T01:57:34.824184625Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #0",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:57:35.439416039Z"
+  },
+  {
+    "textPayload": "Step #0: 65052e355180: Pulling fs layer",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-24",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "project_id": "fine-effect-435423-b8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T01:57:34.834729418Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #0",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:57:35.439416039Z"
+  },
+  {
+    "textPayload": "Step #0: 9cf3157062e6: Pulling fs layer",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-25",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "project_id": "fine-effect-435423-b8",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T01:57:34.834741652Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #0",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:57:35.439416039Z"
+  },
+  {
+    "textPayload": "Step #0: dcfb660a4e70: Pulling fs layer",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-26",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "project_id": "fine-effect-435423-b8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8"
+      }
+    },
+    "timestamp": "2024-12-12T01:57:34.834742634Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #0"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:57:35.439416039Z"
+  },
+  {
+    "textPayload": "Step #0: dcfb660a4e70: Verifying Checksum",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-27",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "project_id": "fine-effect-435423-b8",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8"
+      }
+    },
+    "timestamp": "2024-12-12T01:57:35.208185403Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #0",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:57:35.439416039Z"
+  },
+  {
+    "textPayload": "Step #0: dcfb660a4e70: Download complete",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-28",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "project_id": "fine-effect-435423-b8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8"
+      }
+    },
+    "timestamp": "2024-12-12T01:57:35.208198686Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #0",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:57:35.439416039Z"
+  },
+  {
+    "textPayload": "Step #0: 9cf3157062e6: Verifying Checksum",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-29",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "project_id": "fine-effect-435423-b8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T01:57:35.242330755Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #0"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:57:35.439416039Z"
+  },
+  {
+    "textPayload": "Step #0: 9cf3157062e6: Download complete",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-30",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "project_id": "fine-effect-435423-b8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8"
+      }
+    },
+    "timestamp": "2024-12-12T01:57:35.242683489Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #0",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:57:35.439416039Z"
+  },
+  {
+    "textPayload": "Step #0: 65052e355180: Verifying Checksum",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-31",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "project_id": "fine-effect-435423-b8"
+      }
+    },
+    "timestamp": "2024-12-12T01:57:35.597060811Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #0"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:57:36.445454933Z"
+  },
+  {
+    "textPayload": "Step #0: 65052e355180: Download complete",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-32",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "project_id": "fine-effect-435423-b8"
+      }
+    },
+    "timestamp": "2024-12-12T01:57:35.597086903Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #0",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:57:36.445454933Z"
+  },
+  {
+    "textPayload": "Step #0: 65052e355180: Pull complete",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-33",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "project_id": "fine-effect-435423-b8"
+      }
+    },
+    "timestamp": "2024-12-12T01:57:37.531055656Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #0",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:57:38.449242835Z"
+  },
+  {
+    "textPayload": "Step #0: 9cf3157062e6: Pull complete",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-34",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "project_id": "fine-effect-435423-b8",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T01:57:37.684562956Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #0"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:57:38.449242835Z"
+  },
+  {
+    "textPayload": "Step #0: dcfb660a4e70: Pull complete",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-35",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "project_id": "fine-effect-435423-b8"
+      }
+    },
+    "timestamp": "2024-12-12T01:57:37.760512923Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #0",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:57:38.449242835Z"
+  },
+  {
+    "textPayload": "Step #0: Digest: sha256:426f843809ae05f324883afceebaa2b9cab9cb697097dbb1a2a7a41c5701de72",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-36",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "project_id": "fine-effect-435423-b8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T01:57:37.775705734Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #0",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:57:38.449242835Z"
+  },
+  {
+    "textPayload": "Step #0: Status: Downloaded newer image for node:20-alpine",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-37",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "project_id": "fine-effect-435423-b8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T01:57:37.782475839Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #0"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:57:38.449242835Z"
+  },
+  {
+    "textPayload": "Step #0:  ---> 2215267afb33",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-38",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "project_id": "fine-effect-435423-b8"
+      }
+    },
+    "timestamp": "2024-12-12T01:57:37.786003143Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #0",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:57:38.449242835Z"
+  },
+  {
+    "textPayload": "Step #0: Step 2/11 : WORKDIR /usr/src/app",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-39",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "project_id": "fine-effect-435423-b8"
+      }
+    },
+    "timestamp": "2024-12-12T01:57:37.786032604Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #0",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:57:38.449242835Z"
+  },
+  {
+    "textPayload": "Step #0:  ---> Running in 1447f8ff89b6",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-40",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "project_id": "fine-effect-435423-b8",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8"
+      }
+    },
+    "timestamp": "2024-12-12T01:57:40.356747801Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #0"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:57:40.438808287Z"
+  },
+  {
+    "textPayload": "Step #0: Removing intermediate container 1447f8ff89b6",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-41",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "project_id": "fine-effect-435423-b8"
+      }
+    },
+    "timestamp": "2024-12-12T01:57:40.453092712Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #0"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:57:41.439805886Z"
+  },
+  {
+    "textPayload": "Step #0:  ---> 874f99af2a89",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-42",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "project_id": "fine-effect-435423-b8",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T01:57:40.453122285Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #0",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:57:41.439805886Z"
+  },
+  {
+    "textPayload": "Step #0: Step 3/11 : COPY ./cs-1660-project/package.json .",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-43",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "project_id": "fine-effect-435423-b8"
+      }
+    },
+    "timestamp": "2024-12-12T01:57:40.453123228Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #0",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:57:41.439805886Z"
+  },
+  {
+    "textPayload": "Step #0:  ---> 97f99e259897",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-44",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "project_id": "fine-effect-435423-b8",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T01:57:40.593141118Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #0"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:57:41.439805886Z"
+  },
+  {
+    "textPayload": "Step #0: Step 4/11 : COPY ./cs-1660-project/package-lock.json .",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-45",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "project_id": "fine-effect-435423-b8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T01:57:40.593171166Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #0",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:57:41.439805886Z"
+  },
+  {
+    "textPayload": "Step #0:  ---> fd6a77925f36",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-46",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "project_id": "fine-effect-435423-b8",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T01:57:40.737125895Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #0"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:57:41.439805886Z"
+  },
+  {
+    "textPayload": "Step #0: Step 5/11 : RUN npm install -g @angular/cli",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-47",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "project_id": "fine-effect-435423-b8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T01:57:40.737139024Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #0"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:57:41.439805886Z"
+  },
+  {
+    "textPayload": "Step #0:  ---> Running in de3a5d15fc64",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-48",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "project_id": "fine-effect-435423-b8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T01:57:40.765597327Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #0",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:57:41.439805886Z"
+  },
+  {
+    "textPayload": "Step #0: ",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-49",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "project_id": "fine-effect-435423-b8",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8"
+      }
+    },
+    "timestamp": "2024-12-12T01:57:58.150078241Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #0"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:57:58.449577193Z"
+  },
+  {
+    "textPayload": "Step #0: added 272 packages in 17s",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-50",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "project_id": "fine-effect-435423-b8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T01:57:58.150092742Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #0",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:57:58.449577193Z"
+  },
+  {
+    "textPayload": "Step #0: ",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-51",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "project_id": "fine-effect-435423-b8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T01:57:58.150440722Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #0",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:57:58.449577193Z"
+  },
+  {
+    "textPayload": "Step #0: 51 packages are looking for funding",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-52",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "project_id": "fine-effect-435423-b8",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8"
+      }
+    },
+    "timestamp": "2024-12-12T01:57:58.150806858Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #0"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:57:58.449577193Z"
+  },
+  {
+    "textPayload": "Step #0:   run `npm fund` for details",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-53",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "project_id": "fine-effect-435423-b8",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T01:57:58.150832678Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #0"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:57:58.449577193Z"
+  },
+  {
+    "textPayload": "Step #0: \u001b[91mnpm notice",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-54",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "project_id": "fine-effect-435423-b8",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8"
+      }
+    },
+    "timestamp": "2024-12-12T01:57:58.154372549Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #0",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:57:58.449577193Z"
+  },
+  {
+    "textPayload": "Step #0: npm notice New minor version of npm available! 10.8.2 -> 10.9.2",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-55",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "project_id": "fine-effect-435423-b8"
+      }
+    },
+    "timestamp": "2024-12-12T01:57:58.154381435Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #0",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:57:58.449577193Z"
+  },
+  {
+    "textPayload": "Step #0: npm notice Changelog: https://github.com/npm/cli/releases/tag/v10.9.2",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-56",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "project_id": "fine-effect-435423-b8"
+      }
+    },
+    "timestamp": "2024-12-12T01:57:58.154403982Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #0"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:57:58.449577193Z"
+  },
+  {
+    "textPayload": "Step #0: npm notice To update run: npm install -g npm@10.9.2",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-57",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "project_id": "fine-effect-435423-b8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T01:57:58.154404665Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #0",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:57:58.449577193Z"
+  },
+  {
+    "textPayload": "Step #0: npm notice",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-58",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "project_id": "fine-effect-435423-b8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T01:57:58.154405348Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #0",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:57:58.449577193Z"
+  },
+  {
+    "textPayload": "Step #0: \u001b[0mRemoving intermediate container de3a5d15fc64",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-59",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "project_id": "fine-effect-435423-b8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8"
+      }
+    },
+    "timestamp": "2024-12-12T01:58:02.115499801Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #0",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:58:02.439197557Z"
+  },
+  {
+    "textPayload": "Step #0:  ---> 09dae2351548",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-60",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "project_id": "fine-effect-435423-b8",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8"
+      }
+    },
+    "timestamp": "2024-12-12T01:58:02.115513567Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #0",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:58:02.439197557Z"
+  },
+  {
+    "textPayload": "Step #0: Step 6/11 : RUN npm install",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-61",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "project_id": "fine-effect-435423-b8",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8"
+      }
+    },
+    "timestamp": "2024-12-12T01:58:02.115514754Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #0",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:58:02.439197557Z"
+  },
+  {
+    "textPayload": "Step #0:  ---> Running in 28b2bf05e5bc",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-62",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "project_id": "fine-effect-435423-b8",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T01:58:02.157395881Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #0",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:58:02.439197557Z"
+  },
+  {
+    "textPayload": "Step #0: \u001b[91mnpm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-63",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "project_id": "fine-effect-435423-b8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T01:58:09.186033323Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #0"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:58:09.440164749Z"
+  },
+  {
+    "textPayload": "Step #0: \u001b[0m\u001b[91mnpm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-64",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "project_id": "fine-effect-435423-b8"
+      }
+    },
+    "timestamp": "2024-12-12T01:58:10.536983275Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #0",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:58:11.455001423Z"
+  },
+  {
+    "textPayload": "Step #0: \u001b[0m\u001b[91mnpm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-65",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "project_id": "fine-effect-435423-b8"
+      }
+    },
+    "timestamp": "2024-12-12T01:58:10.725938056Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #0"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:58:11.455001423Z"
+  },
+  {
+    "textPayload": "Step #0: \u001b[0m\u001b[91mnpm warn deprecated critters@0.0.24: Ownership of Critters has moved to the Nuxt team, who will be maintaining the project going forward. If you'd like to keep using Critters, please switch to the actively-maintained fork at https://github.com/danielroe/beasties",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-66",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "project_id": "fine-effect-435423-b8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T01:58:12.226977557Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #0"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:58:12.440933674Z"
+  },
+  {
+    "textPayload": "Step #0: \u001b[0m",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-67",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "project_id": "fine-effect-435423-b8"
+      }
+    },
+    "timestamp": "2024-12-12T01:58:21.117447929Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #0"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:58:21.441298570Z"
+  },
+  {
+    "textPayload": "Step #0: added 967 packages, and audited 968 packages in 18s",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-68",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "project_id": "fine-effect-435423-b8",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8"
+      }
+    },
+    "timestamp": "2024-12-12T01:58:21.117478533Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #0"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:58:21.441298570Z"
+  },
+  {
+    "textPayload": "Step #0: ",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-69",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "project_id": "fine-effect-435423-b8",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8"
+      }
+    },
+    "timestamp": "2024-12-12T01:58:21.117831886Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #0"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:58:21.441298570Z"
+  },
+  {
+    "textPayload": "Step #0: 154 packages are looking for funding",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-70",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "project_id": "fine-effect-435423-b8",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T01:58:21.117839678Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #0"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:58:21.441298570Z"
+  },
+  {
+    "textPayload": "Step #0:   run `npm fund` for details",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-71",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "project_id": "fine-effect-435423-b8",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T01:58:21.117840708Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #0"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:58:21.441298570Z"
+  },
+  {
+    "textPayload": "Step #0: ",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-72",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "project_id": "fine-effect-435423-b8"
+      }
+    },
+    "timestamp": "2024-12-12T01:58:21.119855524Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #0"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:58:21.441298570Z"
+  },
+  {
+    "textPayload": "Step #0: found 0 vulnerabilities",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-73",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "project_id": "fine-effect-435423-b8"
+      }
+    },
+    "timestamp": "2024-12-12T01:58:21.119883071Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #0"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:58:21.441298570Z"
+  },
+  {
+    "textPayload": "Step #0: Removing intermediate container 28b2bf05e5bc",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-74",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "project_id": "fine-effect-435423-b8",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T01:58:35.002542024Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #0"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:58:35.440615020Z"
+  },
+  {
+    "textPayload": "Step #0:  ---> 68975cdcf2fe",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-75",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "project_id": "fine-effect-435423-b8",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8"
+      }
+    },
+    "timestamp": "2024-12-12T01:58:35.002554484Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #0",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:58:35.440615020Z"
+  },
+  {
+    "textPayload": "Step #0: Step 7/11 : COPY ./cs-1660-project .",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-76",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "project_id": "fine-effect-435423-b8"
+      }
+    },
+    "timestamp": "2024-12-12T01:58:35.002555458Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #0"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:58:35.440615020Z"
+  },
+  {
+    "textPayload": "Step #0:  ---> 3d2ccec580c3",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-77",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "project_id": "fine-effect-435423-b8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T01:58:58.625297829Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #0"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:58:59.438666969Z"
+  },
+  {
+    "textPayload": "Step #0: Step 8/11 : RUN ng build --configuration production",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-78",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "project_id": "fine-effect-435423-b8",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T01:58:58.625316547Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #0"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:58:59.438666969Z"
+  },
+  {
+    "textPayload": "Step #0:  ---> Running in a18b808d37fd",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-79",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "project_id": "fine-effect-435423-b8"
+      }
+    },
+    "timestamp": "2024-12-12T01:58:58.695957650Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #0",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:58:59.438666969Z"
+  },
+  {
+    "textPayload": "Step #0: ❯ Building...",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-80",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "project_id": "fine-effect-435423-b8"
+      }
+    },
+    "timestamp": "2024-12-12T01:59:00.499270176Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #0"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:59:01.438728800Z"
+  },
+  {
+    "textPayload": "Step #0: ✔ Building...",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-81",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "project_id": "fine-effect-435423-b8",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T01:59:38.465478743Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #0"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:59:39.452914254Z"
+  },
+  {
+    "textPayload": "Step #0: Browser bundles        ",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-82",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "project_id": "fine-effect-435423-b8"
+      }
+    },
+    "timestamp": "2024-12-12T01:59:38.475252882Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #0",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:59:39.452914254Z"
+  },
+  {
+    "textPayload": "Step #0: Initial chunk files     | Names               |  Raw size | Estimated transfer size",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-83",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "project_id": "fine-effect-435423-b8",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T01:59:38.475268131Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #0",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:59:39.452914254Z"
+  },
+  {
+    "textPayload": "Step #0: main-TGT2SKQE.js        | main                | 815.33 kB |               172.76 kB",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-84",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "project_id": "fine-effect-435423-b8",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T01:59:38.475269431Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #0"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:59:39.452914254Z"
+  },
+  {
+    "textPayload": "Step #0: chunk-MGRUYWUN.js       | -                   | 179.72 kB |                51.90 kB",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-85",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "project_id": "fine-effect-435423-b8"
+      }
+    },
+    "timestamp": "2024-12-12T01:59:38.475270376Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #0",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:59:39.452914254Z"
+  },
+  {
+    "textPayload": "Step #0: styles-JVVAYVNO.css     | styles              |  71.05 kB |                 7.11 kB",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-86",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "project_id": "fine-effect-435423-b8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T01:59:38.475270988Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #0",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:59:39.452914254Z"
+  },
+  {
+    "textPayload": "Step #0: polyfills-FFHMD2TL.js   | polyfills           |  34.52 kB |                11.28 kB",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-87",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "project_id": "fine-effect-435423-b8",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T01:59:38.475271680Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #0"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:59:39.452914254Z"
+  },
+  {
+    "textPayload": "Step #0: ",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-88",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "project_id": "fine-effect-435423-b8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8"
+      }
+    },
+    "timestamp": "2024-12-12T01:59:38.475272136Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #0"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:59:39.452914254Z"
+  },
+  {
+    "textPayload": "Step #0:                         | Initial total       |   1.10 MB |               243.06 kB",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-89",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "project_id": "fine-effect-435423-b8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T01:59:38.475273218Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #0",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:59:39.452914254Z"
+  },
+  {
+    "textPayload": "Step #0: ",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-90",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "project_id": "fine-effect-435423-b8"
+      }
+    },
+    "timestamp": "2024-12-12T01:59:38.475273611Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #0",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:59:39.452914254Z"
+  },
+  {
+    "textPayload": "Step #0: Lazy chunk files        | Names               |  Raw size | Estimated transfer size",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-91",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "project_id": "fine-effect-435423-b8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T01:59:38.475274093Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #0",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:59:39.452914254Z"
+  },
+  {
+    "textPayload": "Step #0: chunk-XBH22N7A.js       | browser             |  63.57 kB |                16.84 kB",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-92",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "project_id": "fine-effect-435423-b8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T01:59:38.475274607Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #0"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:59:39.452914254Z"
+  },
+  {
+    "textPayload": "Step #0: ",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-93",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "project_id": "fine-effect-435423-b8",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T01:59:38.475274958Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #0"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:59:39.452914254Z"
+  },
+  {
+    "textPayload": "Step #0: ",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-94",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "project_id": "fine-effect-435423-b8",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T01:59:38.475275383Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #0"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:59:39.452914254Z"
+  },
+  {
+    "textPayload": "Step #0: Server bundles         ",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-95",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "project_id": "fine-effect-435423-b8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T01:59:38.475275914Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #0"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:59:39.452914254Z"
+  },
+  {
+    "textPayload": "Step #0: Initial chunk files     | Names               |  Raw size",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-96",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "project_id": "fine-effect-435423-b8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8"
+      }
+    },
+    "timestamp": "2024-12-12T01:59:38.475277260Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #0"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:59:39.452914254Z"
+  },
+  {
+    "textPayload": "Step #0: server.mjs              | server              |   1.11 MB |                        ",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-97",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "project_id": "fine-effect-435423-b8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8"
+      }
+    },
+    "timestamp": "2024-12-12T01:59:38.475277849Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #0"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:59:39.452914254Z"
+  },
+  {
+    "textPayload": "Step #0: chunk-ZATE2WOC.mjs      | -                   | 725.20 kB |                        ",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-98",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "project_id": "fine-effect-435423-b8"
+      }
+    },
+    "timestamp": "2024-12-12T01:59:38.475278638Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #0",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:59:39.452914254Z"
+  },
+  {
+    "textPayload": "Step #0: chunk-5WH476JA.mjs      | -                   | 335.56 kB |                        ",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-99",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "project_id": "fine-effect-435423-b8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T01:59:38.475279085Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #0"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:59:39.452914254Z"
+  },
+  {
+    "textPayload": "Step #0: polyfills.server.mjs    | polyfills.server    | 268.60 kB |                        ",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-100",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "project_id": "fine-effect-435423-b8"
+      }
+    },
+    "timestamp": "2024-12-12T01:59:38.475279587Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #0",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:59:39.452914254Z"
+  },
+  {
+    "textPayload": "Step #0: chunk-DQOWDJO3.mjs      | -                   | 261.59 kB |                        ",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-101",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "project_id": "fine-effect-435423-b8"
+      }
+    },
+    "timestamp": "2024-12-12T01:59:38.475280068Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #0",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:59:39.452914254Z"
+  },
+  {
+    "textPayload": "Step #0: chunk-5XUXGTUW.mjs      | -                   |   2.55 kB |                        ",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-102",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "project_id": "fine-effect-435423-b8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T01:59:38.475280528Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #0"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:59:39.452914254Z"
+  },
+  {
+    "textPayload": "Step #0: render-utils.server.mjs | render-utils.server |   1.50 kB |                        ",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-103",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "project_id": "fine-effect-435423-b8"
+      }
+    },
+    "timestamp": "2024-12-12T01:59:38.475281149Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #0"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:59:39.452914254Z"
+  },
+  {
+    "textPayload": "Step #0: main.server.mjs         | main.server         | 178 bytes |                        ",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-104",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "project_id": "fine-effect-435423-b8",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T01:59:38.475281725Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #0"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:59:39.452914254Z"
+  },
+  {
+    "textPayload": "Step #0: ",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-105",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "project_id": "fine-effect-435423-b8"
+      }
+    },
+    "timestamp": "2024-12-12T01:59:38.475282165Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #0"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:59:39.452914254Z"
+  },
+  {
+    "textPayload": "Step #0: Lazy chunk files        | Names               |  Raw size",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-106",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "project_id": "fine-effect-435423-b8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T01:59:38.475282875Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #0",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:59:39.452914254Z"
+  },
+  {
+    "textPayload": "Step #0: chunk-VCVCHJZV.mjs      | xhr2                |  12.07 kB |                        ",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-107",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "project_id": "fine-effect-435423-b8"
+      }
+    },
+    "timestamp": "2024-12-12T01:59:38.475283555Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #0"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:59:39.452914254Z"
+  },
+  {
+    "textPayload": "Step #0: chunk-DLGNICMG.mjs      | browser             | 927 bytes |                        ",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-108",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "project_id": "fine-effect-435423-b8",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T01:59:38.475284339Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #0"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:59:39.452914254Z"
+  },
+  {
+    "textPayload": "Step #0: ",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-109",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "project_id": "fine-effect-435423-b8"
+      }
+    },
+    "timestamp": "2024-12-12T01:59:38.475284676Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #0"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:59:39.452914254Z"
+  },
+  {
+    "textPayload": "Step #0: Prerendered 2 static routes.",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-110",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "project_id": "fine-effect-435423-b8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T01:59:38.475285902Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #0",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:59:39.452914254Z"
+  },
+  {
+    "textPayload": "Step #0: Application bundle generation complete. [37.963 seconds]",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-111",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "project_id": "fine-effect-435423-b8"
+      }
+    },
+    "timestamp": "2024-12-12T01:59:38.475286717Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #0",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:59:39.452914254Z"
+  },
+  {
+    "textPayload": "Step #0: ",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-112",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "project_id": "fine-effect-435423-b8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8"
+      }
+    },
+    "timestamp": "2024-12-12T01:59:38.475287152Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #0"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:59:39.452914254Z"
+  },
+  {
+    "textPayload": "Step #0: \u001b[91m▲ [WARNING] bundle initial exceeded maximum budget. Budget 512.00 kB was not met by 588.62 kB with a total of 1.10 MB.",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-113",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "project_id": "fine-effect-435423-b8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T01:59:38.484679406Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #0",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:59:39.452914254Z"
+  },
+  {
+    "textPayload": "Step #0: ",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-114",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "project_id": "fine-effect-435423-b8",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T01:59:38.484690366Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #0"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:59:39.452914254Z"
+  },
+  {
+    "textPayload": "Step #0: ",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-115",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "project_id": "fine-effect-435423-b8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8"
+      }
+    },
+    "timestamp": "2024-12-12T01:59:38.484691152Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #0"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:59:39.452914254Z"
+  },
+  {
+    "textPayload": "Step #0: \u001b[0mOutput location: /usr/src/app/dist/cs-1660-project",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-116",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "project_id": "fine-effect-435423-b8",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T01:59:38.534881542Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #0"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:59:39.452914254Z"
+  },
+  {
+    "textPayload": "Step #0: ",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-117",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "project_id": "fine-effect-435423-b8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T01:59:38.534892089Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #0",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:59:39.452914254Z"
+  },
+  {
+    "textPayload": "Step #0: Removing intermediate container a18b808d37fd",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-118",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "project_id": "fine-effect-435423-b8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T01:59:39.087306155Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #0",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:59:39.452914254Z"
+  },
+  {
+    "textPayload": "Step #0:  ---> f4df6371da44",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-119",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "project_id": "fine-effect-435423-b8",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T01:59:39.087321190Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #0"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:59:39.452914254Z"
+  },
+  {
+    "textPayload": "Step #0: Step 9/11 : WORKDIR /usr/src/app/server",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-120",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "project_id": "fine-effect-435423-b8"
+      }
+    },
+    "timestamp": "2024-12-12T01:59:39.087322174Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #0"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:59:39.452914254Z"
+  },
+  {
+    "textPayload": "Step #0:  ---> Running in 5878a973cf0b",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-121",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "project_id": "fine-effect-435423-b8",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T01:59:39.128232196Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #0",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:59:39.452914254Z"
+  },
+  {
+    "textPayload": "Step #0: Removing intermediate container 5878a973cf0b",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-122",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "project_id": "fine-effect-435423-b8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T01:59:39.222277537Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #0"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:59:39.452914254Z"
+  },
+  {
+    "textPayload": "Step #0:  ---> d03da7f7f4f4",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-123",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "project_id": "fine-effect-435423-b8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8"
+      }
+    },
+    "timestamp": "2024-12-12T01:59:39.222292564Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #0",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:59:39.452914254Z"
+  },
+  {
+    "textPayload": "Step #0: Step 10/11 : EXPOSE 3000",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-124",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "project_id": "fine-effect-435423-b8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8"
+      }
+    },
+    "timestamp": "2024-12-12T01:59:39.222293450Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #0"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:59:39.452914254Z"
+  },
+  {
+    "textPayload": "Step #0:  ---> Running in 6d7d36542c2c",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-125",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "project_id": "fine-effect-435423-b8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T01:59:39.256531059Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #0"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:59:39.452914254Z"
+  },
+  {
+    "textPayload": "Step #0: Removing intermediate container 6d7d36542c2c",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-126",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "project_id": "fine-effect-435423-b8"
+      }
+    },
+    "timestamp": "2024-12-12T01:59:39.350343183Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #0",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:59:39.452914254Z"
+  },
+  {
+    "textPayload": "Step #0:  ---> 8ab404627a0f",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-127",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "project_id": "fine-effect-435423-b8"
+      }
+    },
+    "timestamp": "2024-12-12T01:59:39.350355123Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #0"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:59:39.452914254Z"
+  },
+  {
+    "textPayload": "Step #0: Step 11/11 : ENTRYPOINT [\"node\", \"server.js\"]",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-128",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "project_id": "fine-effect-435423-b8",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T01:59:39.350356235Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #0"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:59:39.452914254Z"
+  },
+  {
+    "textPayload": "Step #0:  ---> Running in 7679eab16fe9",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-129",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "project_id": "fine-effect-435423-b8",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T01:59:39.383346969Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #0"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:59:39.452914254Z"
+  },
+  {
+    "textPayload": "Step #0: Removing intermediate container 7679eab16fe9",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-130",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "project_id": "fine-effect-435423-b8",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T01:59:39.477063267Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #0",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:59:40.449387899Z"
+  },
+  {
+    "textPayload": "Step #0:  ---> 2caf060bd8ec",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-131",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "project_id": "fine-effect-435423-b8"
+      }
+    },
+    "timestamp": "2024-12-12T01:59:39.477074185Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #0",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:59:40.449387899Z"
+  },
+  {
+    "textPayload": "Step #0: Successfully built 2caf060bd8ec",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-132",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "project_id": "fine-effect-435423-b8",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T01:59:40.292110568Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #0",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:59:40.449387899Z"
+  },
+  {
+    "textPayload": "Step #0: Successfully tagged us-central1-docker.pkg.dev/fine-effect-435423-b8/git-it-done/git-it-done-image:682354b5c68f6117106e8e9b65ae4e2c530b35a7",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-133",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "project_id": "fine-effect-435423-b8"
+      }
+    },
+    "timestamp": "2024-12-12T01:59:40.329402321Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #0"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:59:40.449387899Z"
+  },
+  {
+    "textPayload": "Finished Step #0",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-134",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "project_id": "fine-effect-435423-b8"
+      }
+    },
+    "timestamp": "2024-12-12T01:59:40.545578983Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "MAIN",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:59:41.449034531Z"
+  },
+  {
+    "textPayload": "Starting Step #1",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-135",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "project_id": "fine-effect-435423-b8"
+      }
+    },
+    "timestamp": "2024-12-12T01:59:40.545662001Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "MAIN"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:59:41.449034531Z"
+  },
+  {
+    "textPayload": "Step #1: Already have image (with digest): gcr.io/cloud-builders/docker",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-136",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "project_id": "fine-effect-435423-b8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T01:59:40.546913860Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #1",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:59:41.449034531Z"
+  },
+  {
+    "textPayload": "Step #1: The push refers to repository [us-central1-docker.pkg.dev/fine-effect-435423-b8/git-it-done/git-it-done-image]",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-137",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "project_id": "fine-effect-435423-b8",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8"
+      }
+    },
+    "timestamp": "2024-12-12T01:59:41.045998397Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #1"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:59:41.449034531Z"
+  },
+  {
+    "textPayload": "Step #1: 0227b9a0bc83: Preparing",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-138",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "project_id": "fine-effect-435423-b8",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8"
+      }
+    },
+    "timestamp": "2024-12-12T01:59:41.204127842Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #1",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:59:41.449034531Z"
+  },
+  {
+    "textPayload": "Step #1: 933b1ffd8ac0: Preparing",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-139",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "project_id": "fine-effect-435423-b8",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T01:59:41.204139022Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #1",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:59:41.449034531Z"
+  },
+  {
+    "textPayload": "Step #1: 05839c703a38: Preparing",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-140",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "project_id": "fine-effect-435423-b8"
+      }
+    },
+    "timestamp": "2024-12-12T01:59:41.204140107Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #1",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:59:41.449034531Z"
+  },
+  {
+    "textPayload": "Step #1: 82b7bd9ef4ca: Preparing",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-141",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "project_id": "fine-effect-435423-b8"
+      }
+    },
+    "timestamp": "2024-12-12T01:59:41.204140597Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #1",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:59:41.449034531Z"
+  },
+  {
+    "textPayload": "Step #1: 1333aff25bab: Preparing",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-142",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "project_id": "fine-effect-435423-b8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8"
+      }
+    },
+    "timestamp": "2024-12-12T01:59:41.204141278Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #1"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:59:41.449034531Z"
+  },
+  {
+    "textPayload": "Step #1: 108b47ca4e89: Preparing",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-143",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "project_id": "fine-effect-435423-b8",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T01:59:41.204141712Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #1",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:59:41.449034531Z"
+  },
+  {
+    "textPayload": "Step #1: 0aed9c559d77: Preparing",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-144",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "project_id": "fine-effect-435423-b8",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8"
+      }
+    },
+    "timestamp": "2024-12-12T01:59:41.204142160Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #1",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:59:41.449034531Z"
+  },
+  {
+    "textPayload": "Step #1: 9fd30ff9d315: Preparing",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-145",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "project_id": "fine-effect-435423-b8"
+      }
+    },
+    "timestamp": "2024-12-12T01:59:41.204142797Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #1",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:59:41.449034531Z"
+  },
+  {
+    "textPayload": "Step #1: 875b8fb676b2: Preparing",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-146",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "project_id": "fine-effect-435423-b8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8"
+      }
+    },
+    "timestamp": "2024-12-12T01:59:41.204143246Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #1"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:59:41.449034531Z"
+  },
+  {
+    "textPayload": "Step #1: 8c0ba6a3f014: Preparing",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-147",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "project_id": "fine-effect-435423-b8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T01:59:41.204143673Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #1"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:59:41.449034531Z"
+  },
+  {
+    "textPayload": "Step #1: 3e01818d79cd: Preparing",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-148",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "project_id": "fine-effect-435423-b8"
+      }
+    },
+    "timestamp": "2024-12-12T01:59:41.204144334Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #1"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:59:41.449034531Z"
+  },
+  {
+    "textPayload": "Step #1: 0aed9c559d77: Waiting",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-149",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "project_id": "fine-effect-435423-b8"
+      }
+    },
+    "timestamp": "2024-12-12T01:59:41.204827929Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #1"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:59:41.449034531Z"
+  },
+  {
+    "textPayload": "Step #1: 9fd30ff9d315: Waiting",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-150",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "project_id": "fine-effect-435423-b8"
+      }
+    },
+    "timestamp": "2024-12-12T01:59:41.204854768Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #1"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:59:41.449034531Z"
+  },
+  {
+    "textPayload": "Step #1: 875b8fb676b2: Waiting",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-151",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "project_id": "fine-effect-435423-b8"
+      }
+    },
+    "timestamp": "2024-12-12T01:59:41.204855664Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #1",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:59:41.449034531Z"
+  },
+  {
+    "textPayload": "Step #1: 8c0ba6a3f014: Waiting",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-152",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "project_id": "fine-effect-435423-b8"
+      }
+    },
+    "timestamp": "2024-12-12T01:59:41.204856183Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #1",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:59:41.449034531Z"
+  },
+  {
+    "textPayload": "Step #1: 3e01818d79cd: Waiting",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-153",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "project_id": "fine-effect-435423-b8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8"
+      }
+    },
+    "timestamp": "2024-12-12T01:59:41.204856807Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #1",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:59:41.449034531Z"
+  },
+  {
+    "textPayload": "Step #1: 108b47ca4e89: Waiting",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-154",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "project_id": "fine-effect-435423-b8",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T01:59:41.204857718Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #1"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:59:41.449034531Z"
+  },
+  {
+    "textPayload": "Step #1: 1333aff25bab: Pushed",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-155",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "project_id": "fine-effect-435423-b8"
+      }
+    },
+    "timestamp": "2024-12-12T01:59:42.831342439Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #1"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:59:43.452298652Z"
+  },
+  {
+    "textPayload": "Step #1: 0227b9a0bc83: Pushed",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-156",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "project_id": "fine-effect-435423-b8"
+      }
+    },
+    "timestamp": "2024-12-12T01:59:43.481102495Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #1"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:59:44.442617642Z"
+  },
+  {
+    "textPayload": "Step #1: 108b47ca4e89: Pushed",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-157",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "project_id": "fine-effect-435423-b8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T01:59:45.020351546Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #1"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:59:45.443475831Z"
+  },
+  {
+    "textPayload": "Step #1: 9fd30ff9d315: Layer already exists",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-158",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "project_id": "fine-effect-435423-b8"
+      }
+    },
+    "timestamp": "2024-12-12T01:59:45.470005374Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #1"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:59:46.447751249Z"
+  },
+  {
+    "textPayload": "Step #1: 0aed9c559d77: Pushed",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-159",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "project_id": "fine-effect-435423-b8"
+      }
+    },
+    "timestamp": "2024-12-12T01:59:45.645489763Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #1",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:59:46.447751249Z"
+  },
+  {
+    "textPayload": "Step #1: 875b8fb676b2: Layer already exists",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-160",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "project_id": "fine-effect-435423-b8"
+      }
+    },
+    "timestamp": "2024-12-12T01:59:45.981839154Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #1"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:59:46.447751249Z"
+  },
+  {
+    "textPayload": "Step #1: 8c0ba6a3f014: Layer already exists",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-161",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "project_id": "fine-effect-435423-b8",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8"
+      }
+    },
+    "timestamp": "2024-12-12T01:59:45.981862301Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #1"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:59:46.447751249Z"
+  },
+  {
+    "textPayload": "Step #1: 3e01818d79cd: Layer already exists",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-162",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "project_id": "fine-effect-435423-b8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8"
+      }
+    },
+    "timestamp": "2024-12-12T01:59:46.243598413Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #1"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:59:46.447751249Z"
+  },
+  {
+    "textPayload": "Step #1: 82b7bd9ef4ca: Pushed",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-163",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "project_id": "fine-effect-435423-b8"
+      }
+    },
+    "timestamp": "2024-12-12T01:59:54.411644689Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #1"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T01:59:54.451414471Z"
+  },
+  {
+    "textPayload": "Step #1: 05839c703a38: Pushed",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-164",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "project_id": "fine-effect-435423-b8",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T02:00:11.719885852Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #1"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T02:00:12.439832088Z"
+  },
+  {
+    "textPayload": "Step #1: 933b1ffd8ac0: Pushed",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-165",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "project_id": "fine-effect-435423-b8"
+      }
+    },
+    "timestamp": "2024-12-12T02:00:12.606190089Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #1",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T02:00:13.450863467Z"
+  },
+  {
+    "textPayload": "Step #1: 682354b5c68f6117106e8e9b65ae4e2c530b35a7: digest: sha256:48ecedd552a4fa0f64a04a8bd5962d7451d5a0cfd158febebe7691ef40113095 size: 2630",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-166",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "project_id": "fine-effect-435423-b8"
+      }
+    },
+    "timestamp": "2024-12-12T02:00:13.738131935Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #1",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T02:00:14.453361492Z"
+  },
+  {
+    "textPayload": "Finished Step #1",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-167",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "project_id": "fine-effect-435423-b8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8"
+      }
+    },
+    "timestamp": "2024-12-12T02:00:13.954640014Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "MAIN"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T02:00:14.453361492Z"
+  },
+  {
+    "textPayload": "Starting Step #2",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-168",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "project_id": "fine-effect-435423-b8",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T02:00:13.954718286Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "MAIN",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T02:00:14.453361492Z"
+  },
+  {
+    "textPayload": "Step #2: Pulling image: gcr.io/google.com/cloudsdktool/cloud-sdk",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-169",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "project_id": "fine-effect-435423-b8"
+      }
+    },
+    "timestamp": "2024-12-12T02:00:13.955593832Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #2"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T02:00:14.453361492Z"
+  },
+  {
+    "textPayload": "Step #2: Using default tag: latest",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-170",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "project_id": "fine-effect-435423-b8",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8"
+      }
+    },
+    "timestamp": "2024-12-12T02:00:14.376993896Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #2"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T02:00:14.453361492Z"
+  },
+  {
+    "textPayload": "Step #2: latest: Pulling from google.com/cloudsdktool/cloud-sdk",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-171",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "project_id": "fine-effect-435423-b8",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T02:00:14.841878108Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #2"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T02:00:15.454402378Z"
+  },
+  {
+    "textPayload": "Step #2: 908b9e25258b: Already exists",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-172",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "project_id": "fine-effect-435423-b8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T02:00:14.844304668Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #2"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T02:00:15.454402378Z"
+  },
+  {
+    "textPayload": "Step #2: d2eddf3c47c2: Pulling fs layer",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-173",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "project_id": "fine-effect-435423-b8"
+      }
+    },
+    "timestamp": "2024-12-12T02:00:14.854566463Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #2",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T02:00:15.454402378Z"
+  },
+  {
+    "textPayload": "Step #2: e42d15d63a55: Pulling fs layer",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-174",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "project_id": "fine-effect-435423-b8"
+      }
+    },
+    "timestamp": "2024-12-12T02:00:14.855200330Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #2"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T02:00:15.454402378Z"
+  },
+  {
+    "textPayload": "Step #2: 39eccc7a4cf5: Pulling fs layer",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-175",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "project_id": "fine-effect-435423-b8"
+      }
+    },
+    "timestamp": "2024-12-12T02:00:14.855210893Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #2",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T02:00:15.454402378Z"
+  },
+  {
+    "textPayload": "Step #2: afeeb2209090: Pulling fs layer",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-176",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "project_id": "fine-effect-435423-b8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T02:00:14.855212229Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #2",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T02:00:15.454402378Z"
+  },
+  {
+    "textPayload": "Step #2: 81743dd7a13a: Pulling fs layer",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-177",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "project_id": "fine-effect-435423-b8",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T02:00:14.855860672Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #2"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T02:00:15.454402378Z"
+  },
+  {
+    "textPayload": "Step #2: 85e56659bd58: Pulling fs layer",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-178",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "project_id": "fine-effect-435423-b8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T02:00:14.855871449Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #2"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T02:00:15.454402378Z"
+  },
+  {
+    "textPayload": "Step #2: afeeb2209090: Waiting",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-179",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "project_id": "fine-effect-435423-b8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8"
+      }
+    },
+    "timestamp": "2024-12-12T02:00:14.855872554Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #2",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T02:00:15.454402378Z"
+  },
+  {
+    "textPayload": "Step #2: 81743dd7a13a: Waiting",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-180",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "project_id": "fine-effect-435423-b8",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T02:00:14.855873098Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #2"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T02:00:15.454402378Z"
+  },
+  {
+    "textPayload": "Step #2: 85e56659bd58: Waiting",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-181",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "project_id": "fine-effect-435423-b8"
+      }
+    },
+    "timestamp": "2024-12-12T02:00:14.855873845Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #2",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T02:00:15.454402378Z"
+  },
+  {
+    "textPayload": "Step #2: 39eccc7a4cf5: Download complete",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-182",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "project_id": "fine-effect-435423-b8",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8"
+      }
+    },
+    "timestamp": "2024-12-12T02:00:15.001777383Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #2"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T02:00:15.454402378Z"
+  },
+  {
+    "textPayload": "Step #2: e42d15d63a55: Download complete",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-183",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "project_id": "fine-effect-435423-b8"
+      }
+    },
+    "timestamp": "2024-12-12T02:00:15.307702303Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #2",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T02:00:15.454402378Z"
+  },
+  {
+    "textPayload": "Step #2: d2eddf3c47c2: Verifying Checksum",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-184",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "project_id": "fine-effect-435423-b8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8"
+      }
+    },
+    "timestamp": "2024-12-12T02:00:15.327702649Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #2"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T02:00:15.454402378Z"
+  },
+  {
+    "textPayload": "Step #2: d2eddf3c47c2: Download complete",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-185",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "project_id": "fine-effect-435423-b8",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8"
+      }
+    },
+    "timestamp": "2024-12-12T02:00:15.327721435Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #2",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T02:00:15.454402378Z"
+  },
+  {
+    "textPayload": "Step #2: 85e56659bd58: Verifying Checksum",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-186",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "project_id": "fine-effect-435423-b8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T02:00:15.532564616Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #2",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T02:00:16.450351063Z"
+  },
+  {
+    "textPayload": "Step #2: 85e56659bd58: Download complete",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-187",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "project_id": "fine-effect-435423-b8",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8"
+      }
+    },
+    "timestamp": "2024-12-12T02:00:15.532578939Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #2",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T02:00:16.450351063Z"
+  },
+  {
+    "textPayload": "Step #2: 81743dd7a13a: Verifying Checksum",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-188",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "project_id": "fine-effect-435423-b8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8"
+      }
+    },
+    "timestamp": "2024-12-12T02:00:16.720929588Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #2",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T02:00:17.439923825Z"
+  },
+  {
+    "textPayload": "Step #2: 81743dd7a13a: Download complete",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-189",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "project_id": "fine-effect-435423-b8",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T02:00:16.720941384Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #2",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T02:00:17.439923825Z"
+  },
+  {
+    "textPayload": "Step #2: d2eddf3c47c2: Pull complete",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-190",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "project_id": "fine-effect-435423-b8",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T02:00:17.025267679Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #2",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T02:00:17.439923825Z"
+  },
+  {
+    "textPayload": "Step #2: e42d15d63a55: Pull complete",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-191",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "project_id": "fine-effect-435423-b8",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T02:00:18.278902529Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #2"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T02:00:20.439795235Z"
+  },
+  {
+    "textPayload": "Step #2: 39eccc7a4cf5: Pull complete",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-192",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "project_id": "fine-effect-435423-b8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8"
+      }
+    },
+    "timestamp": "2024-12-12T02:00:18.383660188Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #2",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T02:00:20.439795235Z"
+  },
+  {
+    "textPayload": "Step #2: afeeb2209090: Verifying Checksum",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-193",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "project_id": "fine-effect-435423-b8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T02:00:26.490789602Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #2",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T02:00:27.439973774Z"
+  },
+  {
+    "textPayload": "Step #2: afeeb2209090: Download complete",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-194",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "project_id": "fine-effect-435423-b8",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T02:00:26.491027770Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #2",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T02:00:27.439973774Z"
+  },
+  {
+    "textPayload": "Step #2: afeeb2209090: Pull complete",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-195",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "project_id": "fine-effect-435423-b8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T02:01:14.569041311Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #2",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T02:01:15.455602786Z"
+  },
+  {
+    "textPayload": "Step #2: 81743dd7a13a: Pull complete",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-196",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "project_id": "fine-effect-435423-b8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8"
+      }
+    },
+    "timestamp": "2024-12-12T02:01:19.859722844Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #2"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T02:01:20.454399932Z"
+  },
+  {
+    "textPayload": "Step #2: 85e56659bd58: Pull complete",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-197",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "project_id": "fine-effect-435423-b8"
+      }
+    },
+    "timestamp": "2024-12-12T02:01:19.934872198Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #2"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T02:01:20.454399932Z"
+  },
+  {
+    "textPayload": "Step #2: Digest: sha256:3de00d1ff412222f53cf71e7e20c99c13ec3e8e21dc3056e2d6cedc9408afaee",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-198",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "project_id": "fine-effect-435423-b8"
+      }
+    },
+    "timestamp": "2024-12-12T02:01:19.946104236Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #2",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T02:01:20.454399932Z"
+  },
+  {
+    "textPayload": "Step #2: Status: Downloaded newer image for gcr.io/google.com/cloudsdktool/cloud-sdk:latest",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-199",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "project_id": "fine-effect-435423-b8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8"
+      }
+    },
+    "timestamp": "2024-12-12T02:01:19.952191717Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #2",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T02:01:20.454399932Z"
+  },
+  {
+    "textPayload": "Step #2: gcr.io/google.com/cloudsdktool/cloud-sdk:latest",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-200",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "project_id": "fine-effect-435423-b8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T02:01:19.955570512Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #2"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T02:01:20.454399932Z"
+  },
+  {
+    "textPayload": "Step #2: Deploying container to Cloud Run service [git-it-done] in project [fine-effect-435423-b8] region [us-central1]",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-201",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "project_id": "fine-effect-435423-b8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T02:01:23.722074707Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #2"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T02:01:24.446007091Z"
+  },
+  {
+    "textPayload": "Step #2: Deploying...",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-202",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "project_id": "fine-effect-435423-b8",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8"
+      }
+    },
+    "timestamp": "2024-12-12T02:01:23.722341099Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #2"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T02:01:24.446007091Z"
+  },
+  {
+    "textPayload": "Step #2: Setting IAM Policy............done",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-203",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "project_id": "fine-effect-435423-b8",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T02:01:24.811914750Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #2",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T02:01:25.451928005Z"
+  },
+  {
+    "textPayload": "Step #2: Creating Revision.......................................................................................................................................................................................................................................................................................done",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-204",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "project_id": "fine-effect-435423-b8"
+      }
+    },
+    "timestamp": "2024-12-12T02:01:52.098739397Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #2",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T02:01:52.451004436Z"
+  },
+  {
+    "textPayload": "Step #2: Routing traffic.....done",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-205",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "project_id": "fine-effect-435423-b8",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8"
+      }
+    },
+    "timestamp": "2024-12-12T02:01:52.098755935Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #2",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T02:01:52.451004436Z"
+  },
+  {
+    "textPayload": "Step #2: Done.",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-206",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "project_id": "fine-effect-435423-b8"
+      }
+    },
+    "timestamp": "2024-12-12T02:01:52.681000609Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "Step #2",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T02:01:53.423642642Z"
+  },
+  {
+    "textPayload": "Step #2: Service [git-it-done] revision [git-it-done-00012-5gv] has been deployed and is serving 100 percent of traffic.",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-207",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "project_id": "fine-effect-435423-b8",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T02:01:52.717246202Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #2"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T02:01:53.423642642Z"
+  },
+  {
+    "textPayload": "Step #2: Service URL: https://git-it-done-1085175978926.us-central1.run.app",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-208",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "project_id": "fine-effect-435423-b8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T02:01:52.717262965Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "Step #2"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T02:01:53.423642642Z"
+  },
+  {
+    "textPayload": "Finished Step #2",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-209",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "project_id": "fine-effect-435423-b8",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T02:01:53.275515776Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "MAIN",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T02:01:53.423642642Z"
+  },
+  {
+    "textPayload": "PUSH",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-210",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "project_id": "fine-effect-435423-b8",
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8"
+      }
+    },
+    "timestamp": "2024-12-12T02:01:53.275616253Z",
+    "severity": "INFO",
+    "labels": {
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195",
+      "build_step": "MAIN"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T02:01:53.423642642Z"
+  },
+  {
+    "textPayload": "DONE",
+    "insertId": "0256d341-e223-46d5-b85f-f53dd12d4eb8-211",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195",
+        "project_id": "fine-effect-435423-b8"
+      }
+    },
+    "timestamp": "2024-12-12T02:01:53.275636022Z",
+    "severity": "INFO",
+    "labels": {
+      "build_step": "MAIN",
+      "build_tags": "trigger-360d73c0-425c-4772-9d8a-75bac1576195"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/cloudbuild",
+    "receiveTimestamp": "2024-12-12T02:01:53.423642642Z"
+  },
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "status": {},
+      "authenticationInfo": {
+        "principalEmail": "1085175978926@cloudbuild.gserviceaccount.com"
+      },
+      "requestMetadata": {
+        "requestAttributes": {},
+        "destinationAttributes": {}
+      },
+      "serviceName": "cloudbuild.googleapis.com",
+      "methodName": "google.devtools.cloudbuild.v1.CloudBuild.CreateBuild",
+      "authorizationInfo": [
+        {
+          "resource": "projects/fine-effect-435423-b8",
+          "permission": "cloudbuild.builds.create",
+          "granted": true,
+          "resourceAttributes": {},
+          "permissionType": "ADMIN_WRITE"
+        }
+      ],
+      "resourceName": "projects/fine-effect-435423-b8/builds",
+      "resourceLocation": {
+        "currentLocations": [
+          "global"
+        ]
+      }
+    },
+    "insertId": "5jscz6dko4q",
+    "resource": {
+      "type": "build",
+      "labels": {
+        "build_id": "0256d341-e223-46d5-b85f-f53dd12d4eb8",
+        "project_id": "fine-effect-435423-b8",
+        "build_trigger_id": "360d73c0-425c-4772-9d8a-75bac1576195"
+      }
+    },
+    "timestamp": "2024-12-12T02:01:54.696948Z",
+    "severity": "NOTICE",
+    "logName": "projects/fine-effect-435423-b8/logs/cloudaudit.googleapis.com%2Factivity",
+    "operation": {
+      "id": "operations/build/fine-effect-435423-b8/MDI1NmQzNDEtZTIyMy00NmQ1LWI4NWYtZjUzZGQxMmQ0ZWI4",
+      "producer": "cloudbuild.googleapis.com",
+      "last": true
+    },
+    "receiveTimestamp": "2024-12-12T02:01:54.815248943Z"
+  }
+]
