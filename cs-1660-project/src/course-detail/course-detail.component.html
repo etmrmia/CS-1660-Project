@@ -1,4 +1,4 @@
-<h3>{{ course()?.courseID }} {{ course()?.courseName }}</h3>
+<h3>{{ course()?.courseid }} {{ course()?.coursename }}</h3>
 <div>
   <nav mat-tab-nav-bar [tabPanel]="tabPanel">
     @for (link of pageLinks; track link) {
@@ -21,16 +21,14 @@
         <div>Total Attendance: {{ userAttendance().length }}</div>
         <mat-list>
           @for (date of userAttendance(); track date) {
-          <mat-list-item>{{
-            date.attendanceDate.toLocaleDateString()
-          }}</mat-list-item>
+          <mat-list-item>{{ date.attendancedate }}</mat-list-item>
           <mat-divider />
           }
         </mat-list>
       </div>
     </ng-container>
     <ng-container *ngIf="!user()?.isStudent">
-      <h3>Attendance for {{ course()?.courseName }}</h3>
+      <h3>Attendance for {{ course()?.coursename }}</h3>
       <table
         mat-table
         [dataSource]="attendanceToDisplay()"

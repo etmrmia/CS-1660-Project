@@ -1,9 +1,14 @@
 <mat-card class="card" appearance="outlined" (click)="navigateToCourse()">
   <mat-card-content>
-    <mat-card-header style="color:hotpink;">{{ course()?.courseID }}</mat-card-header>
-    <mat-card-title style="color:hotpink; font-weight:bold">{{ course()?.courseName }}</mat-card-title>
-    <mat-card-footer style="color:gray;">
-      Instructor: {{ course()?.professor?.firstName }} {{ course()?.professor?.lastName }}
+    <mat-card-header style="color: hotpink">{{
+      course()?.courseid
+    }}</mat-card-header>
+    <mat-card-title style="color: hotpink; font-weight: bold">{{
+      course()?.coursename
+    }}</mat-card-title>
+    <mat-card-footer style="color: gray">
+      Instructor: {{ course()?.firstname }}
+      {{ course()?.lastname }}
     </mat-card-footer>
   </mat-card-content>
 </mat-card>

@@ -14,6 +14,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
 import { Router } from '@angular/router';
 import { UserStore } from '../stores/user.store';
+import { CourseStore } from '../stores/course.store';
 
 @Component({
   selector: 'app-login',
@@ -41,14 +42,24 @@ export class LoginComponent {
   });
 
   userStore = inject(UserStore);
+  courseStore = inject(CourseStore);
 
   constructor(private router: Router) {}
 
-  onSubmit(): void {
+  async onSubmit(): Promise<void> {
     if (this.loginForm.valid) {
-      // TODO: Add user login authentication
-      this.userStore.loadUserInfo();
-      this.router.navigate(['/home']);
+      const validLogin = await this.userStore
+        .loadUserInfo(
+          this.loginForm.controls['email'].value,
+          this.loginForm.controls['password'].value
+        )
+        .then((val) => {
+          if (val) {
+            console.log(val);
+            this.courseStore.loadCourses(val.id, val.isStudent);
+            this.router.navigate(['/home']);
+          }
+        });
     } else {
       console.log('Form is not valid');
     }

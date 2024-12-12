@@ -25,7 +25,7 @@ import { QrCodeComponent } from '../qr-code/qr-code.component';
   styleUrl: './course-detail.component.scss',
 })
 export class CourseDetailComponent {
-  // Changee Link 'Contentj' to QR Code 
+  // Changee Link 'Contentj' to QR Code
   pageLinks = ['QR Code', 'Gradebook'];
   activeLink = 'QR Code';
   readonly courseStore = inject(CourseStore);
@@ -33,7 +33,7 @@ export class CourseDetailComponent {
   course = this.courseStore.courseChosen;
   user = this.userStore.user;
   allStudents = this.userStore.studentsInCourse;
-  allAttendence = this.userStore.courseAttendance;
+  allAttendance = this.userStore.courseAttendance;
   userAttendance = this.userStore.studentAttendance;
   allStudentInfoColumns = ['sid', 'name', 'totalAttendance'];
   attendanceToDisplay = computed<StudentAttendanceDisplay[]>(() => {
@@ -44,8 +44,8 @@ export class CourseDetailComponent {
     let allStudentAttendance: StudentAttendanceDisplay[] = [];
 
     this.allStudents().forEach((s) => {
-      const studentAttendance = this.allAttendence().filter(
-        (a) => a.studentId === s.id
+      const studentAttendance = this.userAttendance().filter(
+        (a) => a.studentid === s.id
       );
       allStudentAttendance.push({
         id: s.id,
@@ -62,8 +62,8 @@ export class CourseDetailComponent {
     if (this.user()?.isStudent) {
       this.userStore.loadStudentAttendance(this.user()?.id);
     } else {
-      this.userStore.loadStudentsInCourse(this.course()?.courseID);
-      this.userStore.loadAllAttendanceInCourse(this.course()?.courseID);
+      this.userStore.loadStudentsInCourse(this.course()?.courseid);
+      this.userStore.loadAllAttendanceInCourse(this.course()?.courseid);
     }
   }
 
@@ -83,7 +83,7 @@ export class CourseDetailComponent {
   }
 }
 
-// TODO: add QR Scanner component to course detail component & create event on scan 
-// To call API in backend to store the information scanned from the QR code 
-// NOTE: this functionality should only be available for STUDENTS 
-// i.e. SCAN FUNCTIONALITY WILL NOT BE AVAILABLE TO PROFESSOR ROLES  
+// TODO: add QR Scanner component to course detail component & create event on scan
+// To call API in backend to store the information scanned from the QR code
+// NOTE: this functionality should only be available for STUDENTS
+// i.e. SCAN FUNCTIONALITY WILL NOT BE AVAILABLE TO PROFESSOR ROLES
