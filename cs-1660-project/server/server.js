@@ -150,15 +150,15 @@ app.post('/studentcourses', async function (req, res) {
                   ORDER BY c.courseID;`;
   try {
     var rows = await pool.query(query);
+
+    // Sends course information for user back as json object
+    res.setHeader('Content-Type', 'application/json');
+    res.send(JSON.stringify({ courseRows : rows }));
   }
   catch (e) {
     console.log(e);
     return;
   }
-  
-  // Sends course information for user back as json object
-  res.setHeader('Content-Type', 'application/json');
-  res.send(JSON.stringify({ courseRows : rows }));
 });
 
 /**
@@ -173,15 +173,15 @@ app.post('/professorsections', async function (req, res) {
                   ORDER BY c.courseID;`;
   try {
     var rows = await pool.query(query);
+
+    // Sends course information for user back as json object
+    res.setHeader('Content-Type', 'application/json');
+    res.send(JSON.stringify({ courseRows : rows }));
   }
   catch (e) {
     console.log(e);
     return;
   }
-  
-  // Sends course information for user back as json object
-  res.setHeader('Content-Type', 'application/json');
-  res.send(JSON.stringify({ courseRows : rows }));
 });
 
 /**
@@ -193,18 +193,18 @@ app.post('/usersincourse', async function (req, res) {
                   FROM gititdonedb.ROSTER AS r JOIN gititdonedb.STUDENT AS s ON r.studentID=s.studentID
                   WHERE r.courseID = ${req.body["courseID"]}
                   ORDER BY s.lastName, s.firstName, s.studentID;`;
+  console.log(`In usersincourse => ${query}`);
   try {
     var rows = await pool.query(query);
+    console.log(rows);
+    // Sends student list back as json object
+    res.setHeader('Content-Type', 'application/json');
+    res.send(JSON.stringify({ studentList : rows }));
   }
   catch (e) {
     console.log(e);
     return;
   }
-  
-  console.log(rows);
-  // Sends student list back as json object
-  res.setHeader('Content-Type', 'application/json');
-  res.send(JSON.stringify({ studentList : rows }));
 });
 
 // Endpoint encodes qr code as Base64 string and sends this information
