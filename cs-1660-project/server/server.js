@@ -208,29 +208,6 @@ app.post('/usersincourse', async function (req, res) {
 });
 
 // Endpoint encodes qr code as Base64 string and sends this information
-app.post('/qrcode', async (req, res) => {
-  
-  let data = {
-    sectionNo : 101,
-    courseID : "TEST1",
-    profID : 0
-  }
-
-  qrCode.toDataURL(JSON.stringify(data), {type:'terminal'},
-  function(err, base64url) {
-    if (err) {
-      console.log(err);
-      return;
-    }
-    console.log(base64url);
-    res.setHeader('Content-Type', 'application/json');
-    res.send({qrCode:base64url});
-  }
-)
-
-});
-
-// Endpoint encodes qr code as Base64 string and sends this information
 app.post('/qrcode',  async (req, res) => {
 
   console.log("Getting qr code");
@@ -253,11 +230,11 @@ app.post('/qrcode',  async (req, res) => {
 app.post('/getAttendance', express.json(), async (req, res) => {
  
   //Testing
-  // console.log("Getting student attendance");
-  // console.log(req.body);
-  // console.log(req.body["studentID"]);
-  // console.log(req.body["courseID"]);
-  // console.log(req.body["sectionNo"]);
+  console.log("Getting student attendance");
+  console.log(req.body);
+  console.log(req.body["studentID"]);
+  console.log(req.body["courseID"]);
+  console.log(req.body["sectionNo"]);
 
   // Query to see if student has already attended
   const query = `SELECT *

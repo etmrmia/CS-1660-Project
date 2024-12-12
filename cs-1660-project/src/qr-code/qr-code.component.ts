@@ -37,7 +37,7 @@ export class QrCodeComponent implements OnInit {
   isPresent = false;
 
   ngOnInit() {
-    if (this.user()?.isStudent) {
+    if (this.user()?.isStudent === true) {
       const studentJSON = {
         sectionNo: this.course()?.sectionno, // replace with current user's section number
         courseID: this.course()?.courseid, // replace with current user's courseID
@@ -50,6 +50,8 @@ export class QrCodeComponent implements OnInit {
       //   courseID: "CS1660",   // replace with current user's courseID
       //   studentID: 1,         // replace with user's studentID
       // }
+      console.log(studentJSON);
+      console.log("IS STUDENT");
       this.checkIfAttended(studentJSON);
     } else {
       console.log('IS PROFESSOR');
@@ -77,7 +79,7 @@ export class QrCodeComponent implements OnInit {
     if (String(data.attended) === 'True') {
       this.clearHTML();
     } else {
-      this.clearHTML();
+      // this.clearHTML();
       this.getQrCodeURL();
     }
   }
