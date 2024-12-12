@@ -14,13 +14,8 @@ import { UserStore } from '../stores/user.store';
   styleUrl: './home.component.scss',
 })
 export class HomeComponent {
-  // TODO: Get user information (includes if user is a student or a professor)
   readonly courseStore = inject(CourseStore);
   readonly userStore = inject(UserStore);
   courses = this.courseStore.courses;
   user = this.userStore.user;
-
-  addCourse() {
-    //TODO: Implement add course
-  }
 }
