@@ -1,0 +1,705 @@
+[
+  {
+    "textPayload": "Node Express server listening on http://localhost:8080",
+    "insertId": "6756611e0003e82ddcb932f3",
+    "resource": {
+      "type": "cloud_run_revision",
+      "labels": {
+        "service_name": "git-it-done",
+        "project_id": "fine-effect-435423-b8",
+        "configuration_name": "git-it-done",
+        "location": "us-central1",
+        "revision_name": "git-it-done-00001-xm4"
+      }
+    },
+    "timestamp": "2024-12-09T03:16:46.256045Z",
+    "labels": {
+      "instanceId": "004940b3b811c3b01ffd59465075dd661d00badb2afe8880650f28dd99ad035dcdf13898246d095524d22ffd508a3539618d171cedc1594ffd134e37db6cee38b1c1a5324c48"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2024-12-09T03:16:46.263849672Z"
+  },
+  {
+    "textPayload": "Default STARTUP TCP probe succeeded after 1 attempt for container \"git-it-done-1\" on port 8080.",
+    "insertId": "6756611e0003f4c0a153c96e",
+    "resource": {
+      "type": "cloud_run_revision",
+      "labels": {
+        "service_name": "git-it-done",
+        "location": "us-central1",
+        "project_id": "fine-effect-435423-b8",
+        "revision_name": "git-it-done-00001-xm4",
+        "configuration_name": "git-it-done"
+      }
+    },
+    "timestamp": "2024-12-09T03:16:46.259264Z",
+    "severity": "INFO",
+    "labels": {
+      "instanceId": "004940b3b811c3b01ffd59465075dd661d00badb2afe8880650f28dd99ad035dcdf13898246d095524d22ffd508a3539618d171cedc1594ffd134e37db6cee38b1c1a5324c48"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/run.googleapis.com%2Fvarlog%2Fsystem",
+    "receiveTimestamp": "2024-12-09T03:16:46.265026669Z"
+  },
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "status": {
+        "message": "Ready condition status changed to True for Revision git-it-done-00001-xm4."
+      },
+      "serviceName": "run.googleapis.com",
+      "methodName": "/Services.CreateService",
+      "resourceName": "namespaces/fine-effect-435423-b8/revisions/git-it-done-00001-xm4",
+      "response": {
+        "metadata": {
+          "name": "git-it-done-00001-xm4",
+          "namespace": "1085175978926",
+          "selfLink": "/apis/serving.knative.dev/v1/namespaces/1085175978926/revisions/git-it-done-00001-xm4",
+          "uid": "65f181b1-f414-4e33-8b76-5a5e038f72c6",
+          "resourceVersion": "AAYozcto/FA",
+          "generation": 1,
+          "creationTimestamp": "2024-12-09T03:16:15.106469Z",
+          "labels": {
+            "client.knative.dev/nonce": "xriunjannj",
+            "serving.knative.dev/configuration": "git-it-done",
+            "serving.knative.dev/configurationGeneration": "1",
+            "serving.knative.dev/service": "git-it-done",
+            "serving.knative.dev/serviceUid": "8ae7d22c-78e8-4160-b1ee-01213a63bceb",
+            "serving.knative.dev/route": "git-it-done",
+            "cloud.googleapis.com/location": "us-central1",
+            "run.googleapis.com/startupProbeType": "Default"
+          },
+          "annotations": {
+            "run.googleapis.com/client-name": "gcloud",
+            "run.googleapis.com/client-version": "502.0.0",
+            "run.googleapis.com/startup-cpu-boost": "true",
+            "run.googleapis.com/operation-id": "a1a8ac58-d590-42b1-a2df-85d1d2450d87",
+            "autoscaling.knative.dev/maxScale": "100",
+            "serving.knative.dev/creator": "etmrmia172130@gmail.com"
+          },
+          "ownerReferences": [
+            {
+              "kind": "Configuration",
+              "name": "git-it-done",
+              "uid": "2dc5752b-ff50-4954-a1d6-170a4c0213a5",
+              "apiVersion": "serving.knative.dev/v1",
+              "controller": true,
+              "blockOwnerDeletion": true
+            }
+          ]
+        },
+        "apiVersion": "serving.knative.dev/v1",
+        "kind": "Revision",
+        "spec": {
+          "containerConcurrency": 80,
+          "timeoutSeconds": 300,
+          "serviceAccountName": "1085175978926-compute@developer.gserviceaccount.com",
+          "containers": [
+            {
+              "name": "git-it-done-1",
+              "image": "us-central1-docker.pkg.dev/fine-effect-435423-b8/cloud-run-source-deploy/git-it-done@sha256:09cbd1ccd0061908c4565081eeec21324a182df7a67863b348848b68fa983895",
+              "ports": [
+                {
+                  "name": "http1",
+                  "containerPort": 8080
+                }
+              ],
+              "resources": {
+                "limits": {
+                  "memory": "512Mi",
+                  "cpu": "1000m"
+                }
+              },
+              "startupProbe": {
+                "timeoutSeconds": 240,
+                "periodSeconds": 240,
+                "failureThreshold": 1,
+                "tcpSocket": {
+                  "port": 8080
+                }
+              }
+            }
+          ]
+        },
+        "status": {
+          "observedGeneration": 1,
+          "conditions": [
+            {
+              "type": "Ready",
+              "status": "True",
+              "lastTransitionTime": "2024-12-09T03:16:46.325840Z"
+            },
+            {
+              "type": "ContainerHealthy",
+              "status": "True",
+              "message": "Container became healthy.",
+              "lastTransitionTime": "2024-12-09T03:16:46.274769Z"
+            },
+            {
+              "type": "ContainerReady",
+              "status": "True",
+              "message": "Container image import completed in 12.920146s.",
+              "lastTransitionTime": "2024-12-09T03:16:28.699924Z"
+            },
+            {
+              "type": "ResourcesAvailable",
+              "status": "True",
+              "message": "Revision deployment finished in 16.449955s. Checking container health.",
+              "lastTransitionTime": "2024-12-09T03:16:45.146541Z"
+            }
+          ],
+          "logUrl": "https://console.cloud.google.com/logs/viewer?project=fine-effect-435423-b8&resource=cloud_run_revision/service_name/git-it-done/revision_name/git-it-done-00001-xm4&advancedFilter=resource.type%3D%22cloud_run_revision%22%0Aresource.labels.service_name%3D%22git-it-done%22%0Aresource.labels.revision_name%3D%22git-it-done-00001-xm4%22",
+          "imageDigest": "us-central1-docker.pkg.dev/fine-effect-435423-b8/cloud-run-source-deploy/git-it-done@sha256:09cbd1ccd0061908c4565081eeec21324a182df7a67863b348848b68fa983895",
+          "containerStatuses": [
+            {
+              "name": "git-it-done-1",
+              "imageDigest": "us-central1-docker.pkg.dev/fine-effect-435423-b8/cloud-run-source-deploy/git-it-done@sha256:09cbd1ccd0061908c4565081eeec21324a182df7a67863b348848b68fa983895"
+            }
+          ]
+        },
+        "@type": "type.googleapis.com/google.cloud.run.v1.Revision"
+      }
+    },
+    "insertId": "epeyhyddo60",
+    "resource": {
+      "type": "cloud_run_revision",
+      "labels": {
+        "service_name": "git-it-done",
+        "project_id": "fine-effect-435423-b8",
+        "location": "us-central1",
+        "revision_name": "git-it-done-00001-xm4",
+        "configuration_name": "git-it-done"
+      }
+    },
+    "timestamp": "2024-12-09T03:16:46.337253Z",
+    "severity": "INFO",
+    "logName": "projects/fine-effect-435423-b8/logs/cloudaudit.googleapis.com%2Fsystem_event",
+    "receiveTimestamp": "2024-12-09T03:16:47.259090451Z"
+  },
+  {
+    "insertId": "6756612c000bc19bacfda674",
+    "httpRequest": {
+      "requestMethod": "GET",
+      "requestUrl": "https://git-it-done-1085175978926.us-central1.run.app/",
+      "requestSize": "1080",
+      "status": 200,
+      "responseSize": "122125",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+      "remoteIp": "100.6.160.239",
+      "serverIp": "216.239.32.53",
+      "latency": "0.059560733s",
+      "protocol": "HTTP/1.1"
+    },
+    "resource": {
+      "type": "cloud_run_revision",
+      "labels": {
+        "revision_name": "git-it-done-00001-xm4",
+        "service_name": "git-it-done",
+        "location": "us-central1",
+        "project_id": "fine-effect-435423-b8",
+        "configuration_name": "git-it-done"
+      }
+    },
+    "timestamp": "2024-12-09T03:17:00.624018Z",
+    "severity": "INFO",
+    "labels": {
+      "instanceId": "004940b3b811c3b01ffd59465075dd661d00badb2afe8880650f28dd99ad035dcdf13898246d095524d22ffd508a3539618d171cedc1594ffd134e37db6cee38b1c1a5324c48"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/run.googleapis.com%2Frequests",
+    "trace": "projects/fine-effect-435423-b8/traces/bbc92da45a65694d0cb55e1fc2dceb17",
+    "receiveTimestamp": "2024-12-09T03:17:00.774272022Z",
+    "spanId": "be8f4f75b838b5a1",
+    "traceSampled": true
+  },
+  {
+    "insertId": "6756612c000d07043284b687",
+    "httpRequest": {
+      "requestMethod": "GET",
+      "requestUrl": "https://git-it-done-1085175978926.us-central1.run.app/styles-JVVAYVNO.css",
+      "requestSize": "997",
+      "status": 200,
+      "responseSize": "71330",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+      "remoteIp": "100.6.160.239",
+      "referer": "https://git-it-done-1085175978926.us-central1.run.app/",
+      "serverIp": "216.239.32.53",
+      "latency": "0.015636117s",
+      "protocol": "HTTP/1.1"
+    },
+    "resource": {
+      "type": "cloud_run_revision",
+      "labels": {
+        "revision_name": "git-it-done-00001-xm4",
+        "project_id": "fine-effect-435423-b8",
+        "service_name": "git-it-done",
+        "configuration_name": "git-it-done",
+        "location": "us-central1"
+      }
+    },
+    "timestamp": "2024-12-09T03:17:00.836166Z",
+    "severity": "INFO",
+    "labels": {
+      "instanceId": "004940b3b811c3b01ffd59465075dd661d00badb2afe8880650f28dd99ad035dcdf13898246d095524d22ffd508a3539618d171cedc1594ffd134e37db6cee38b1c1a5324c48"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/run.googleapis.com%2Frequests",
+    "trace": "projects/fine-effect-435423-b8/traces/34baabf8921f0ff4d61f802ef56344da",
+    "receiveTimestamp": "2024-12-09T03:17:01.109248052Z",
+    "spanId": "95495113bb3a123a"
+  },
+  {
+    "insertId": "6756612c000d68932a1db56e",
+    "httpRequest": {
+      "requestMethod": "GET",
+      "requestUrl": "https://git-it-done-1085175978926.us-central1.run.app/main-Z7X35LJX.js",
+      "requestSize": "1041",
+      "status": 200,
+      "responseSize": "437595",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+      "remoteIp": "100.6.160.239",
+      "referer": "https://git-it-done-1085175978926.us-central1.run.app/",
+      "serverIp": "216.239.32.53",
+      "latency": "0.030467393s",
+      "protocol": "HTTP/1.1"
+    },
+    "resource": {
+      "type": "cloud_run_revision",
+      "labels": {
+        "revision_name": "git-it-done-00001-xm4",
+        "service_name": "git-it-done",
+        "configuration_name": "git-it-done",
+        "location": "us-central1",
+        "project_id": "fine-effect-435423-b8"
+      }
+    },
+    "timestamp": "2024-12-09T03:17:00.846322Z",
+    "severity": "INFO",
+    "labels": {
+      "instanceId": "004940b3b811c3b01ffd59465075dd661d00badb2afe8880650f28dd99ad035dcdf13898246d095524d22ffd508a3539618d171cedc1594ffd134e37db6cee38b1c1a5324c48"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/run.googleapis.com%2Frequests",
+    "trace": "projects/fine-effect-435423-b8/traces/7e51440c86262d76cbf9bf6c2ac32bf0",
+    "receiveTimestamp": "2024-12-09T03:17:01.109248052Z",
+    "spanId": "51a931b66c2b6a6b"
+  },
+  {
+    "insertId": "6756612c000d58801c40c6f7",
+    "httpRequest": {
+      "requestMethod": "GET",
+      "requestUrl": "https://git-it-done-1085175978926.us-central1.run.app/chunk-4GXKJIDI.js",
+      "requestSize": "976",
+      "status": 200,
+      "responseSize": "179542",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+      "remoteIp": "100.6.160.239",
+      "serverIp": "216.239.32.53",
+      "latency": "0.025532436s",
+      "protocol": "HTTP/1.1"
+    },
+    "resource": {
+      "type": "cloud_run_revision",
+      "labels": {
+        "location": "us-central1",
+        "project_id": "fine-effect-435423-b8",
+        "configuration_name": "git-it-done",
+        "revision_name": "git-it-done-00001-xm4",
+        "service_name": "git-it-done"
+      }
+    },
+    "timestamp": "2024-12-09T03:17:00.847205Z",
+    "severity": "INFO",
+    "labels": {
+      "instanceId": "004940b3b811c3b01ffd59465075dd661d00badb2afe8880650f28dd99ad035dcdf13898246d095524d22ffd508a3539618d171cedc1594ffd134e37db6cee38b1c1a5324c48"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/run.googleapis.com%2Frequests",
+    "trace": "projects/fine-effect-435423-b8/traces/635add9658d0fac4717d471bd38a75ba",
+    "receiveTimestamp": "2024-12-09T03:17:01.109248052Z",
+    "spanId": "b884fd4a68a24cb2"
+  },
+  {
+    "insertId": "6756612c000d4b69f2406651",
+    "httpRequest": {
+      "requestMethod": "GET",
+      "requestUrl": "https://git-it-done-1085175978926.us-central1.run.app/polyfills-FFHMD2TL.js",
+      "requestSize": "1046",
+      "status": 200,
+      "responseSize": "34808",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+      "remoteIp": "100.6.160.239",
+      "referer": "https://git-it-done-1085175978926.us-central1.run.app/",
+      "serverIp": "216.239.32.53",
+      "latency": "0.022054978s",
+      "protocol": "HTTP/1.1"
+    },
+    "resource": {
+      "type": "cloud_run_revision",
+      "labels": {
+        "revision_name": "git-it-done-00001-xm4",
+        "project_id": "fine-effect-435423-b8",
+        "configuration_name": "git-it-done",
+        "service_name": "git-it-done",
+        "location": "us-central1"
+      }
+    },
+    "timestamp": "2024-12-09T03:17:00.847590Z",
+    "severity": "INFO",
+    "labels": {
+      "instanceId": "004940b3b811c3b01ffd59465075dd661d00badb2afe8880650f28dd99ad035dcdf13898246d095524d22ffd508a3539618d171cedc1594ffd134e37db6cee38b1c1a5324c48"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/run.googleapis.com%2Frequests",
+    "trace": "projects/fine-effect-435423-b8/traces/871d1ecd002b8ac1c0e571af5042a31a",
+    "receiveTimestamp": "2024-12-09T03:17:01.109248052Z",
+    "spanId": "ca76334c541347ad"
+  },
+  {
+    "insertId": "6756612d000131953de4971f",
+    "httpRequest": {
+      "requestMethod": "GET",
+      "requestUrl": "https://git-it-done-1085175978926.us-central1.run.app/chunk-AC5B4SCS.js",
+      "requestSize": "1057",
+      "status": 200,
+      "responseSize": "63861",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+      "remoteIp": "100.6.160.239",
+      "referer": "https://git-it-done-1085175978926.us-central1.run.app/main-Z7X35LJX.js",
+      "serverIp": "216.239.32.53",
+      "latency": "0.019279153s",
+      "protocol": "HTTP/1.1"
+    },
+    "resource": {
+      "type": "cloud_run_revision",
+      "labels": {
+        "service_name": "git-it-done",
+        "location": "us-central1",
+        "revision_name": "git-it-done-00001-xm4",
+        "configuration_name": "git-it-done",
+        "project_id": "fine-effect-435423-b8"
+      }
+    },
+    "timestamp": "2024-12-09T03:17:01.057331Z",
+    "severity": "INFO",
+    "labels": {
+      "instanceId": "004940b3b811c3b01ffd59465075dd661d00badb2afe8880650f28dd99ad035dcdf13898246d095524d22ffd508a3539618d171cedc1594ffd134e37db6cee38b1c1a5324c48"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/run.googleapis.com%2Frequests",
+    "trace": "projects/fine-effect-435423-b8/traces/ce2aa352047d1fd17cc55302b203b181",
+    "receiveTimestamp": "2024-12-09T03:17:01.109248052Z",
+    "spanId": "28179ea29e9e0b5f"
+  },
+  {
+    "insertId": "6756612d000cc062c32d39ee",
+    "httpRequest": {
+      "requestMethod": "GET",
+      "requestUrl": "https://git-it-done-1085175978926.us-central1.run.app/favicon.ico",
+      "requestSize": "1038",
+      "status": 200,
+      "responseSize": "15350",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+      "remoteIp": "100.6.160.239",
+      "referer": "https://git-it-done-1085175978926.us-central1.run.app/",
+      "serverIp": "216.239.32.53",
+      "latency": "0.007183671s",
+      "protocol": "HTTP/1.1"
+    },
+    "resource": {
+      "type": "cloud_run_revision",
+      "labels": {
+        "location": "us-central1",
+        "configuration_name": "git-it-done",
+        "project_id": "fine-effect-435423-b8",
+        "service_name": "git-it-done",
+        "revision_name": "git-it-done-00001-xm4"
+      }
+    },
+    "timestamp": "2024-12-09T03:17:01.826301Z",
+    "severity": "INFO",
+    "labels": {
+      "instanceId": "004940b3b811c3b01ffd59465075dd661d00badb2afe8880650f28dd99ad035dcdf13898246d095524d22ffd508a3539618d171cedc1594ffd134e37db6cee38b1c1a5324c48"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/run.googleapis.com%2Frequests",
+    "trace": "projects/fine-effect-435423-b8/traces/61fc124de032d9d146ec55bf39194c2f",
+    "receiveTimestamp": "2024-12-09T03:17:02.110054535Z",
+    "spanId": "4314f7c6d3ec2883"
+  },
+  {
+    "insertId": "67566134000368daaa9d4a8c",
+    "httpRequest": {
+      "requestMethod": "POST",
+      "requestUrl": "https://git-it-done-1085175978926.us-central1.run.app/qrcode",
+      "requestSize": "1101",
+      "status": 404,
+      "responseSize": "370",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+      "remoteIp": "100.6.160.239",
+      "referer": "https://git-it-done-1085175978926.us-central1.run.app/course/CS%201675",
+      "serverIp": "216.239.32.53",
+      "latency": "0.004461324s",
+      "protocol": "HTTP/1.1"
+    },
+    "resource": {
+      "type": "cloud_run_revision",
+      "labels": {
+        "configuration_name": "git-it-done",
+        "project_id": "fine-effect-435423-b8",
+        "location": "us-central1",
+        "revision_name": "git-it-done-00001-xm4",
+        "service_name": "git-it-done"
+      }
+    },
+    "timestamp": "2024-12-09T03:17:08.216795Z",
+    "severity": "WARNING",
+    "labels": {
+      "instanceId": "004940b3b811c3b01ffd59465075dd661d00badb2afe8880650f28dd99ad035dcdf13898246d095524d22ffd508a3539618d171cedc1594ffd134e37db6cee38b1c1a5324c48"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/run.googleapis.com%2Frequests",
+    "trace": "projects/fine-effect-435423-b8/traces/d22c4de55551caced2be534017b4dab5",
+    "receiveTimestamp": "2024-12-09T03:17:08.432481579Z",
+    "spanId": "b645bb4b28b52961"
+  },
+  {
+    "insertId": "6756613700053163e1c1bbd4",
+    "httpRequest": {
+      "requestMethod": "POST",
+      "requestUrl": "https://git-it-done-1085175978926.us-central1.run.app/qrcode",
+      "requestSize": "1101",
+      "status": 404,
+      "responseSize": "370",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+      "remoteIp": "100.6.160.239",
+      "referer": "https://git-it-done-1085175978926.us-central1.run.app/course/CS%201555",
+      "serverIp": "216.239.32.53",
+      "latency": "0.003712137s",
+      "protocol": "HTTP/1.1"
+    },
+    "resource": {
+      "type": "cloud_run_revision",
+      "labels": {
+        "revision_name": "git-it-done-00001-xm4",
+        "service_name": "git-it-done",
+        "configuration_name": "git-it-done",
+        "project_id": "fine-effect-435423-b8",
+        "location": "us-central1"
+      }
+    },
+    "timestamp": "2024-12-09T03:17:11.334602Z",
+    "severity": "WARNING",
+    "labels": {
+      "instanceId": "004940b3b811c3b01ffd59465075dd661d00badb2afe8880650f28dd99ad035dcdf13898246d095524d22ffd508a3539618d171cedc1594ffd134e37db6cee38b1c1a5324c48"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/run.googleapis.com%2Frequests",
+    "trace": "projects/fine-effect-435423-b8/traces/d1a5b7ece508c3c4392187489e9e49dc",
+    "receiveTimestamp": "2024-12-09T03:17:11.434944659Z",
+    "spanId": "1c0a8d278d7729c9",
+    "traceSampled": true
+  },
+  {
+    "insertId": "67566138000a43ffd539602f",
+    "httpRequest": {
+      "requestMethod": "POST",
+      "requestUrl": "https://git-it-done-1085175978926.us-central1.run.app/qrcode",
+      "requestSize": "1099",
+      "status": 404,
+      "responseSize": "370",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+      "remoteIp": "100.6.160.239",
+      "referer": "https://git-it-done-1085175978926.us-central1.run.app/course/CS%201555",
+      "serverIp": "216.239.32.53",
+      "latency": "0.003726861s",
+      "protocol": "HTTP/1.1"
+    },
+    "resource": {
+      "type": "cloud_run_revision",
+      "labels": {
+        "location": "us-central1",
+        "service_name": "git-it-done",
+        "configuration_name": "git-it-done",
+        "revision_name": "git-it-done-00001-xm4",
+        "project_id": "fine-effect-435423-b8"
+      }
+    },
+    "timestamp": "2024-12-09T03:17:12.667286Z",
+    "severity": "WARNING",
+    "labels": {
+      "instanceId": "004940b3b811c3b01ffd59465075dd661d00badb2afe8880650f28dd99ad035dcdf13898246d095524d22ffd508a3539618d171cedc1594ffd134e37db6cee38b1c1a5324c48"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/run.googleapis.com%2Frequests",
+    "trace": "projects/fine-effect-435423-b8/traces/cfca614917ff5d47dc4ab6ad97ae413d",
+    "receiveTimestamp": "2024-12-09T03:17:12.764902083Z",
+    "spanId": "d18dbd62314bfd85"
+  },
+  {
+    "insertId": "6756613b000444f45c708dd2",
+    "httpRequest": {
+      "requestMethod": "POST",
+      "requestUrl": "https://git-it-done-1085175978926.us-central1.run.app/qrcode",
+      "requestSize": "1101",
+      "status": 404,
+      "responseSize": "370",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+      "remoteIp": "100.6.160.239",
+      "referer": "https://git-it-done-1085175978926.us-central1.run.app/course/CS%201660",
+      "serverIp": "216.239.32.53",
+      "latency": "0.003151985s",
+      "protocol": "HTTP/1.1"
+    },
+    "resource": {
+      "type": "cloud_run_revision",
+      "labels": {
+        "project_id": "fine-effect-435423-b8",
+        "revision_name": "git-it-done-00001-xm4",
+        "service_name": "git-it-done",
+        "location": "us-central1",
+        "configuration_name": "git-it-done"
+      }
+    },
+    "timestamp": "2024-12-09T03:17:15.274662Z",
+    "severity": "WARNING",
+    "labels": {
+      "instanceId": "004940b3b811c3b01ffd59465075dd661d00badb2afe8880650f28dd99ad035dcdf13898246d095524d22ffd508a3539618d171cedc1594ffd134e37db6cee38b1c1a5324c48"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/run.googleapis.com%2Frequests",
+    "trace": "projects/fine-effect-435423-b8/traces/37d2e71e0e82dc744e6068e6018d238d",
+    "receiveTimestamp": "2024-12-09T03:17:15.427451146Z",
+    "spanId": "34d491d5cc7c652c"
+  },
+  {
+    "insertId": "6756613d0005abe2b0713dd7",
+    "httpRequest": {
+      "requestMethod": "POST",
+      "requestUrl": "https://git-it-done-1085175978926.us-central1.run.app/qrcode",
+      "requestSize": "1100",
+      "status": 404,
+      "responseSize": "370",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+      "remoteIp": "100.6.160.239",
+      "referer": "https://git-it-done-1085175978926.us-central1.run.app/course/CS%201675",
+      "serverIp": "216.239.32.53",
+      "latency": "0.003185954s",
+      "protocol": "HTTP/1.1"
+    },
+    "resource": {
+      "type": "cloud_run_revision",
+      "labels": {
+        "revision_name": "git-it-done-00001-xm4",
+        "service_name": "git-it-done",
+        "location": "us-central1",
+        "configuration_name": "git-it-done",
+        "project_id": "fine-effect-435423-b8"
+      }
+    },
+    "timestamp": "2024-12-09T03:17:17.366175Z",
+    "severity": "WARNING",
+    "labels": {
+      "instanceId": "004940b3b811c3b01ffd59465075dd661d00badb2afe8880650f28dd99ad035dcdf13898246d095524d22ffd508a3539618d171cedc1594ffd134e37db6cee38b1c1a5324c48"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/run.googleapis.com%2Frequests",
+    "trace": "projects/fine-effect-435423-b8/traces/6e7a3f767de019b095e4c712cf728315",
+    "receiveTimestamp": "2024-12-09T03:17:17.425713005Z",
+    "spanId": "6557cdee3790d681"
+  },
+  {
+    "insertId": "675661400009c48d001267e1",
+    "httpRequest": {
+      "requestMethod": "POST",
+      "requestUrl": "https://git-it-done-1085175978926.us-central1.run.app/qrcode",
+      "requestSize": "1101",
+      "status": 404,
+      "responseSize": "370",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+      "remoteIp": "100.6.160.239",
+      "referer": "https://git-it-done-1085175978926.us-central1.run.app/course/CS%201660",
+      "serverIp": "216.239.32.53",
+      "latency": "0.003522731s",
+      "protocol": "HTTP/1.1"
+    },
+    "resource": {
+      "type": "cloud_run_revision",
+      "labels": {
+        "configuration_name": "git-it-done",
+        "project_id": "fine-effect-435423-b8",
+        "location": "us-central1",
+        "revision_name": "git-it-done-00001-xm4",
+        "service_name": "git-it-done"
+      }
+    },
+    "timestamp": "2024-12-09T03:17:20.634637Z",
+    "severity": "WARNING",
+    "labels": {
+      "instanceId": "004940b3b811c3b01ffd59465075dd661d00badb2afe8880650f28dd99ad035dcdf13898246d095524d22ffd508a3539618d171cedc1594ffd134e37db6cee38b1c1a5324c48"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/run.googleapis.com%2Frequests",
+    "trace": "projects/fine-effect-435423-b8/traces/ac7b60d17467ff29195657fc2ca72249",
+    "receiveTimestamp": "2024-12-09T03:17:20.760466115Z",
+    "spanId": "875f107a82c8e763"
+  },
+  {
+    "insertId": "6756614b000c357d2af05153",
+    "httpRequest": {
+      "requestMethod": "POST",
+      "requestUrl": "https://git-it-done-1085175978926.us-central1.run.app/qrcode",
+      "requestSize": "1101",
+      "status": 404,
+      "responseSize": "370",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+      "remoteIp": "100.6.160.239",
+      "referer": "https://git-it-done-1085175978926.us-central1.run.app/course/CS%201660",
+      "serverIp": "216.239.32.53",
+      "latency": "0.003215694s",
+      "protocol": "HTTP/1.1"
+    },
+    "resource": {
+      "type": "cloud_run_revision",
+      "labels": {
+        "service_name": "git-it-done",
+        "location": "us-central1",
+        "configuration_name": "git-it-done",
+        "project_id": "fine-effect-435423-b8",
+        "revision_name": "git-it-done-00001-xm4"
+      }
+    },
+    "timestamp": "2024-12-09T03:17:31.795005Z",
+    "severity": "WARNING",
+    "labels": {
+      "instanceId": "004940b3b811c3b01ffd59465075dd661d00badb2afe8880650f28dd99ad035dcdf13898246d095524d22ffd508a3539618d171cedc1594ffd134e37db6cee38b1c1a5324c48"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/run.googleapis.com%2Frequests",
+    "trace": "projects/fine-effect-435423-b8/traces/8e1004b1b8879c56bdb601b117237720",
+    "receiveTimestamp": "2024-12-09T03:17:31.805303143Z",
+    "spanId": "905cb7056be4b552",
+    "traceSampled": true
+  },
+  {
+    "insertId": "6756617100012e55921cd4e7",
+    "httpRequest": {
+      "requestMethod": "POST",
+      "requestUrl": "https://git-it-done-1085175978926.us-central1.run.app/qrcode",
+      "requestSize": "1100",
+      "status": 404,
+      "responseSize": "370",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+      "remoteIp": "100.6.160.239",
+      "referer": "https://git-it-done-1085175978926.us-central1.run.app/course/CS%201660",
+      "serverIp": "216.239.32.53",
+      "latency": "0.004144039s",
+      "protocol": "HTTP/1.1"
+    },
+    "resource": {
+      "type": "cloud_run_revision",
+      "labels": {
+        "project_id": "fine-effect-435423-b8",
+        "service_name": "git-it-done",
+        "revision_name": "git-it-done-00001-xm4",
+        "configuration_name": "git-it-done",
+        "location": "us-central1"
+      }
+    },
+    "timestamp": "2024-12-09T03:18:09.071063Z",
+    "severity": "WARNING",
+    "labels": {
+      "instanceId": "004940b3b811c3b01ffd59465075dd661d00badb2afe8880650f28dd99ad035dcdf13898246d095524d22ffd508a3539618d171cedc1594ffd134e37db6cee38b1c1a5324c48"
+    },
+    "logName": "projects/fine-effect-435423-b8/logs/run.googleapis.com%2Frequests",
+    "trace": "projects/fine-effect-435423-b8/traces/1aacabe5430dcfd8a058e2c94e93bf25",
+    "receiveTimestamp": "2024-12-09T03:18:09.084566902Z",
+    "spanId": "cef26d00f4ef7429",
+    "traceSampled": true
+  }
+]
