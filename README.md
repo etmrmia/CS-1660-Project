@@ -54,3 +54,4 @@ We chose to use Google's Cloud Run to deploy containers and host our web applica
 The Cloud Run functionality allowed us to link our code base stored within the GitHub repository and automatically update to the website whenever we pushed to our production (main) branch. We also had many asynchronous requests due to the need for database data about courses, the current user, and attendance records. In our latest version of the project, we use client and server side communication to call the database via a Pool connection within the server side. Given more time, we would begin to transfer common data transfers, such as the attendance measures at a start of the class or attendance report creation for professors, to the Cloud Run jobs feature in order to ensure tasks are managed in the most efficient manner possible.
 
 ## Architectural Diagram 
+![Software Architecture Diagram](https://github.com/etmrmia/CS-1660-Project/blob/main/CS1660%20Architecture%20Diagram.png)
