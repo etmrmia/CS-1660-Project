@@ -18,6 +18,6 @@ export class CourseBlockComponent {
 
   navigateToCourse() {
     this.courseStore.setCourse(this.course());
-    this.router.navigate(['/course', this.course()?.courseID]);
+    this.router.navigate(['/course', this.course()?.courseid]);
   }
 }

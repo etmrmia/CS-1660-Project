@@ -14,6 +14,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
 import { Router } from '@angular/router';
 import { UserStore } from '../stores/user.store';
+import { CourseStore } from '../stores/course.store';
 
 @Component({
   selector: 'app-login',
@@ -41,6 +42,7 @@ export class LoginComponent {
   });
 
   userStore = inject(UserStore);
+  courseStore = inject(CourseStore);
 
   constructor(private router: Router) {}
 
@@ -53,6 +55,8 @@ export class LoginComponent {
         )
         .then((val) => {
           if (val) {
+            console.log(val);
+            this.courseStore.loadCourses(val.id, val.isStudent);
             this.router.navigate(['/home']);
           }
         });

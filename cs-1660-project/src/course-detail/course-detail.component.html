@@ -1,4 +1,4 @@
-<h3>{{ course()?.courseID }} {{ course()?.courseName }}</h3>
+<h3>{{ course()?.courseid }} {{ course()?.coursename }}</h3>
 <div>
   <nav mat-tab-nav-bar [tabPanel]="tabPanel">
     @for (link of pageLinks; track link) {
@@ -30,7 +30,7 @@
       </div>
     </ng-container>
     <ng-container *ngIf="!user()?.isStudent">
-      <h3>Attendance for {{ course()?.courseName }}</h3>
+      <h3>Attendance for {{ course()?.coursename }}</h3>
       <table
         mat-table
         [dataSource]="attendanceToDisplay()"

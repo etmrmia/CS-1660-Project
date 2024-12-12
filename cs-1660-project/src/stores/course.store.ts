@@ -33,7 +33,7 @@ export const CourseStore = signalStore(
       const direction = filter.order() === 'asc' ? 1 : -1;
 
       return courses().sort(
-        (a, b) => direction * a.courseName.localeCompare(b.courseName)
+        (a, b) => direction * a.coursename.localeCompare(b.coursename)
       );
     }),
   })),
@@ -55,6 +55,8 @@ export const CourseStore = signalStore(
       } else {
         userCourses = await dataService.getCoursesForProfessor();
       }
+      console.log('courses');
+      console.log(userCourses);
 
       patchState(store, (state) => ({
         courses: userCourses,
@@ -63,8 +65,6 @@ export const CourseStore = signalStore(
     },
   })),
   withHooks({
-    onInit(store) {
-      store.loadCourses(1, true);
-    },
+    onInit(store) {},
   })
 );
