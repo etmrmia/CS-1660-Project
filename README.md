@@ -44,6 +44,9 @@ reliability. As seen below.
 
 
 ### Google Cloud Build
+We chose to use Google's Cloud Build to automate and streamline our deployment process. Our use of Cloud Build combines the building of a Docker file, pushing the container to our Artifact Registry, deploying to Cloud Run, and pushing the final project to our repository. This is outlined in our [Cloud Build YAML file](https://github.com/etmrmia/CS-1660-Project/blob/main/cloudbuild.yaml) implementing the steps outlined above.
+
+The main advantage found when using Google Build was the seamless steps that allowed for our project to continue to remain accurate and ability to run on Cloud Build without interrupting the use of the application. We found this especially helpful after merging development branches to our production result as we could keep our code up to date as new features were rolled out without interrupting any testing or building occurring parrallel to the updates. Using the logging feature, we were also able to debug errors that would come with using Cloud Build without having check the numerous services involved with the building process.
 
 ### Google Cloud Run
 
