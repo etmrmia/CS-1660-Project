@@ -16,7 +16,7 @@ The Git It Done QR Attendance Tracker application can be found at [this link](ht
 > |Test Professor User|superuser@pitt.edu|11111111  |
 Attempts to log in with emails outside of the sample data will not allow access to the service. Once inside of the service, the user will see a home screen with courses currently attending or courses currentlly taught. The user can navigate to the courses by clicking on the tile listing the course. Within the course detail page, the user has the open to view the scannable QR code or gradebook which lists attendance for the student or ability to see attendance of students for the professor. Once the user is done using the application, they may logout or simply close the tab.
 
-## Architecture Explanation
+## GCP Service Explanation
 We decided to use three different GCP services for our application: Google Cloud Sql, Google Cloud Build, and Google Cloud Run.
 
 ### Google Cloud Sql
@@ -49,5 +49,8 @@ We chose to use Google's Cloud Build to automate and streamline our deployment p
 The main advantage found when using Google Build was the seamless steps that allowed for our project to continue to remain accurate and ability to run on Cloud Build without interrupting the use of the application. We found this especially helpful after merging development branches to our production result as we could keep our code up to date as new features were rolled out without interrupting any testing or building occurring parrallel to the updates. Using the logging feature, we were also able to debug errors that would come with using Cloud Build without having check the numerous services involved with the building process.
 
 ### Google Cloud Run
+We chose to use Google's Cloud Run to deploy containers and host our web application. Cloud Run is especially helpful to handle the rendering of unique pages based on data stored in the Cloud SQL database and accessing requests from the database to retrieve or add data for student attendance measures.
 
-### Architectural Diagram 
+The Cloud Run functionality allowed us to link our code base stored within the GitHub repository and automatically update to the website whenever we pushed to our production (main) branch. We also had many asynchronous requests due to the need for database data about courses, the current user, and attendance records. In our latest version of the project, we use client and server side communication to call the database via a Pool connection within the server side. Given more time, we would begin to transfer common data transfers, such as the attendance measures at a start of the class or attendance report creation for professors, to the Cloud Run jobs feature in order to ensure tasks are managed in the most efficient manner possible.
+
+## Architectural Diagram 
