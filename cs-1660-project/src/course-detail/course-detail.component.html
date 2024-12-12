@@ -21,9 +21,7 @@
         <div>Total Attendance: {{ userAttendance().length }}</div>
         <mat-list>
           @for (date of userAttendance(); track date) {
-          <mat-list-item>{{
-            date.attendanceDate.toLocaleDateString()
-          }}</mat-list-item>
+          <mat-list-item>{{ date.attendancedate }}</mat-list-item>
           <mat-divider />
           }
         </mat-list>

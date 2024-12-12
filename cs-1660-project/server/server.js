@@ -118,10 +118,10 @@ app.post("/authuser", async function (req, res) {
 */
 app.post('/userattendance', async function (req, res) {
   // Queries for number of attendances a student per class
-  const query = `SELECT COUNT(DISTINCT a.attendanceDate) AS attendance, c.courseName AS course
+  const query = `SELECT a.attendanceDate AS attendanceDate, c.courseid AS courseId, s.sectionNo AS sectionNo, a.studentid AS studentId
                   FROM gititdonedb.ATTENDANCE AS a JOIN gititdonedb.COURSE AS c ON a.courseID=c.courseID
+                  JOIN gititdonedb.SECTIONS s on c.courseid = s.courseID
                   WHERE a.studentID = ${req.body["studentId"]}
-                  GROUP BY c.courseName
                   ORDER BY c.courseName;`;
   
   try {
@@ -130,7 +130,7 @@ app.post('/userattendance', async function (req, res) {
   catch (e) {
     console.log(e);
     return;
-  }
+  } 
   
   // Sends user information back as a json object
   res.setHeader('Content-Type', 'application/json');

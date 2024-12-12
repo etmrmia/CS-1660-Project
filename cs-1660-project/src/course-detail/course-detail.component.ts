@@ -33,7 +33,7 @@ export class CourseDetailComponent {
   course = this.courseStore.courseChosen;
   user = this.userStore.user;
   allStudents = this.userStore.studentsInCourse;
-  allAttendence = this.userStore.courseAttendance;
+  allAttendance = this.userStore.courseAttendance;
   userAttendance = this.userStore.studentAttendance;
   allStudentInfoColumns = ['sid', 'name', 'totalAttendance'];
   attendanceToDisplay = computed<StudentAttendanceDisplay[]>(() => {
@@ -44,8 +44,8 @@ export class CourseDetailComponent {
     let allStudentAttendance: StudentAttendanceDisplay[] = [];
 
     this.allStudents().forEach((s) => {
-      const studentAttendance = this.allAttendence().filter(
-        (a) => a.studentId === s.id
+      const studentAttendance = this.userAttendance().filter(
+        (a) => a.studentid === s.id
       );
       allStudentAttendance.push({
         id: s.id,

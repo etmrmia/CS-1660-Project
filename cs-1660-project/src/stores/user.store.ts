@@ -54,51 +54,36 @@ export const UserStore = signalStore(
       }));
       dataService.courseId = courseCode;
       patchState(store, (state) => ({
-        courseAttendance: [
-          {
-            sectionNo: 2,
-            courseId: 'CS 1660',
-            studentId: 1,
-            attendanceDate: new Date(2020, 4, 3),
-          },
-          {
-            sectionNo: 2,
-            courseId: 'CS 1660',
-            studentId: 1,
-            attendanceDate: new Date(2020, 4, 4),
-          },
-          {
-            sectionNo: 2,
-            courseId: 'CS 1660',
-            studentId: 1,
-            attendanceDate: new Date(2020, 4, 5),
-          },
-        ],
+        //   courseAttendance: [
+        //     {
+        //       sectionNo: 2,
+        //       courseId: 'CS 1660',
+        //       studentId: 1,
+        //       attendanceDate: new Date(2020, 4, 3),
+        //     },
+        //     {
+        //       sectionNo: 2,
+        //       courseId: 'CS 1660',
+        //       studentId: 1,
+        //       attendanceDate: new Date(2020, 4, 4),
+        //     },
+        //     {
+        //       sectionNo: 2,
+        //       courseId: 'CS 1660',
+        //       studentId: 1,
+        //       attendanceDate: new Date(2020, 4, 5),
+        //     },
+        //   ],
       }));
     },
-    loadStudentAttendance(sid: number | undefined): void {
+    async loadStudentAttendance(sid: number | undefined): Promise<void> {
       patchState(store, (state) => ({
-        studentAttendance: [
-          {
-            sectionNo: 2,
-            courseId: 'CS 1660',
-            studentId: 1,
-            attendanceDate: new Date(2020, 4, 3),
-          },
-          {
-            sectionNo: 2,
-            courseId: 'CS 1660',
-            studentId: 1,
-            attendanceDate: new Date(2020, 4, 4),
-          },
-          {
-            sectionNo: 2,
-            courseId: 'CS 1660',
-            studentId: 1,
-            attendanceDate: new Date(2020, 4, 5),
-          },
-        ],
+        isLoading: true,
       }));
+      dataService.userId = sid;
+      const attendance = await dataService.getAttendanceForUser();
+      console.log(attendance);
+      patchState(store, { studentAttendance: attendance, isLoading: false });
     },
     logout(): void {
       patchState(store, (state) => ({
